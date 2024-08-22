@@ -71,13 +71,13 @@ const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100
                 </div>
                 <div className={ style.dente_container + " w-100 h-100 d-flex justify-content-center align-items-center"}>    
                     <DenteDrawLine
-                        valuePSCord1={valuePSCord1}
-                        valuePSCord2={valuePSCord2}
-                        valuePSCord3={valuePSCord3}
-                        valueMGCord1={valueMGCord1}
-                        valueMGCord2={valueMGCord2}
-                        valueMGCord3={valueMGCord3}
                         graphicLineHeight={graphicLineHeight}
+                        CordX1={valuePSCord1}
+                        CordX2={valuePSCord2}
+                        CordX3={valuePSCord3}
+                        CordY1={valueMGCord1}
+                        CordY2={valueMGCord2}
+                        CordY3={valueMGCord3}
                     />
 
                     <img src={denteIcon} className={" position-relative"} style={{top: height+"px", width: denteWidth+"%"}}/>
