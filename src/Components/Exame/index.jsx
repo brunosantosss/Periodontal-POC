@@ -19,6 +19,7 @@ import vestibularDente27 from "../../assets/dentes/superior/vestibular/png/Dente
 import vestibularDente28 from "../../assets/dentes/superior/vestibular/png/Dente28.svg";
 
 import DenteComponent from "../DenteComponent";
+import GraphicExameLines from "../GraphicExameLines";
 
 import style from "./index.module.css";
 
@@ -27,15 +28,23 @@ const Exame = () => {
         <section className="vw-100 vh-100 overflow-x-hidden d-flex p-5">
             <div className="w-100 h-100 d-flex justify-content-center align-items-center">
                 <div className= { style.graphic_exam_container + " w-100 d-flex justify-content-center"} >
-                    <div className="w-50 d-flex">
-                        <DenteComponent denteIcon={vestibularDente18} height={50} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente17} height={47} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente16} height={51} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente15} height={37} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente14} height={28} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente13} height={0} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente12} height={30} graphicLineHeight={47}/>
-                        <DenteComponent denteIcon={vestibularDente11} height={57} graphicLineHeight={47}/>
+
+
+                    <div className="d-flex flex-column mx-5">
+                        <p className="fw-bold">Profundidade de sondagem</p>
+                        <p className="fw-bold">Margem gengival</p>
+                    </div>
+
+                    <div className="w-50 d-flex justify-content-center">
+                        <GraphicExameLines />
+                        <DenteComponent denteIcon={vestibularDente18} height={57} graphicLineHeight={46} denteWidth={93}/>
+                        <DenteComponent denteIcon={vestibularDente17} height={51} graphicLineHeight={46} denteWidth={98}/>
+                        <DenteComponent denteIcon={vestibularDente16} height={53} graphicLineHeight={46} denteWidth={105}/>
+                        <DenteComponent denteIcon={vestibularDente15} height={45} graphicLineHeight={46} denteWidth={90}/>
+                        <DenteComponent denteIcon={vestibularDente14} height={35} graphicLineHeight={46} denteWidth={93}/>
+                        <DenteComponent denteIcon={vestibularDente13} height={7} graphicLineHeight={46} denteWidth={95}/>
+                        <DenteComponent denteIcon={vestibularDente12} height={43} graphicLineHeight={46} denteWidth={82}/>
+                        <DenteComponent denteIcon={vestibularDente11} height={55} graphicLineHeight={46} denteWidth={115}/>
                     </div>
                     {/* <div className="w-100 d-flex">
                         <DenteComponent denteIcon={vestibularDente21}/>
