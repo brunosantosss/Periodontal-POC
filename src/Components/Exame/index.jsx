@@ -24,7 +24,6 @@ const dentesList = [
     { denteNumber: 11, denteIcon: vestibularDente11, denteHeight: 51, graphicLineHeight: 5.3, denteWidth: 127 },
 ];
 
-
 const Exame = () => {
     return (
         <section className="vw-100 vh-100 overflow-x-hidden d-flex p-5">
