@@ -12,7 +12,6 @@ import DenteComponent from "../DenteComponent";
 import GraphicExameLines from "../GraphicExameLines";
 
 import style from "./index.module.css";
-import MultiLineSVG from "../MultiLineSVG";
 
 const Exame = () => {
     return (
