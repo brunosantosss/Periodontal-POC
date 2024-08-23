@@ -1,5 +1,7 @@
 import { useState } from "react";
-import DenteDrawLine from "./DenteDrawLine";
+
+import DenteDrawLineMG from "./DenteDrawLineMG";
+import DenteDrawLinePS from "./DenteDrawLinePS";
 
 import style from "./index.module.css";
 
@@ -69,18 +71,22 @@ const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100
                         </div>
                     </div>
                 </div>
-                <div className={ style.dente_container + " w-100 h-100 d-flex justify-content-center align-items-center"}>    
-                    <DenteDrawLine
-                        graphicLineHeight={graphicLineHeight}
-                        CordX1={valuePSCord1}
-                        CordX2={valuePSCord2}
-                        CordX3={valuePSCord3}
-                        CordY1={valueMGCord1}
-                        CordY2={valueMGCord2}
-                        CordY3={valueMGCord3}
-                    />
-
-                    <img src={denteIcon} className={" position-relative"} style={{top: height+"px", width: denteWidth+"%"}}/>
+                <div className={ style.dente_container + " w-100 h-100 d-flex justify-content-center align-items-center"}>  
+                    <div className="position-relative d-flex justify-content-start align-items-center">
+                        <DenteDrawLinePS 
+                            graphicLineHeight={graphicLineHeight}
+                            CordY1={valuePSCord1}
+                            CordY2={valuePSCord2}
+                            CordY3={valuePSCord3}
+                        />
+                        <DenteDrawLineMG
+                            graphicLineHeight={graphicLineHeight}
+                            CordY1={valueMGCord1}
+                            CordY2={valueMGCord2}
+                            CordY3={valueMGCord3}
+                        />
+                        <img src={denteIcon} className={"position-relative"} style={{top: height+"px", width: denteWidth+"%"}}/>
+                    </div>
                 </div>
 
             </div>

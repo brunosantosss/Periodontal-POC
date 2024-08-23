@@ -24,20 +24,19 @@ const Exame = () => {
                         <p className="fw-bold">Margem gengival</p>
                     </div>
 
-                    <div className="w-50 d-flex justify-content-center">
+                    <div className="w-50 d-flex justify-content-center align-items-center">
                         <GraphicExameLines />
-                        <DenteComponent denteIcon={vestibularDente18} height={57} graphicLineHeight={48.5} denteWidth={93}/>
-                        <DenteComponent denteIcon={vestibularDente17} height={51} graphicLineHeight={48.5} denteWidth={98}/>
-                        <DenteComponent denteIcon={vestibularDente16} height={53} graphicLineHeight={48.5} denteWidth={105}/>
-                        <DenteComponent denteIcon={vestibularDente15} height={45} graphicLineHeight={48.5} denteWidth={90}/>
-                        <DenteComponent denteIcon={vestibularDente14} height={35} graphicLineHeight={48.5} denteWidth={93}/>
-                        <DenteComponent denteIcon={vestibularDente13} height={7} graphicLineHeight={48.5} denteWidth={95}/>
-                        <DenteComponent denteIcon={vestibularDente12} height={43} graphicLineHeight={48.5} denteWidth={82}/>
-                        <DenteComponent denteIcon={vestibularDente11} height={55} graphicLineHeight={48.5} denteWidth={115}/>
+                        <DenteComponent denteIcon={vestibularDente18} height={56} graphicLineHeight={0.6} denteWidth={93}/>
+                        <DenteComponent denteIcon={vestibularDente17} height={51} graphicLineHeight={0.9} denteWidth={98}/>
+                        <DenteComponent denteIcon={vestibularDente16} height={53} graphicLineHeight={1.2} denteWidth={105}/>
+                        <DenteComponent denteIcon={vestibularDente15} height={45} graphicLineHeight={3.4} denteWidth={90}/>
+                        <DenteComponent denteIcon={vestibularDente14} height={35} graphicLineHeight={3.850} denteWidth={93}/>
+                        <DenteComponent denteIcon={vestibularDente13} height={7} graphicLineHeight={6} denteWidth={95}/>
+                        <DenteComponent denteIcon={vestibularDente12} height={39} graphicLineHeight={5} denteWidth={90}/>
+                        <DenteComponent denteIcon={vestibularDente11} height={51} graphicLineHeight={5.3} denteWidth={127}/>
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }
