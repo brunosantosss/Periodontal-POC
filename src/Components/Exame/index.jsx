@@ -13,6 +13,18 @@ import GraphicExameLines from "../GraphicExameLines";
 
 import style from "./index.module.css";
 
+const dentesList = [
+    { denteNumber: 18, denteIcon: vestibularDente18, denteHeight: 56, graphicLineHeight: 0.6, denteWidth: 93 },
+    { denteNumber: 17, denteIcon: vestibularDente17, denteHeight: 51, graphicLineHeight: 0.9, denteWidth: 98 },
+    { denteNumber: 16, denteIcon: vestibularDente16, denteHeight: 53, graphicLineHeight: 1.2, denteWidth: 105 },
+    { denteNumber: 15, denteIcon: vestibularDente15, denteHeight: 45, graphicLineHeight: 3.4, denteWidth: 90 },
+    { denteNumber: 14, denteIcon: vestibularDente14, denteHeight: 35, graphicLineHeight: 3.850, denteWidth: 93 },
+    { denteNumber: 13, denteIcon: vestibularDente13, denteHeight: 7, graphicLineHeight: 6, denteWidth: 95 },
+    { denteNumber: 12, denteIcon: vestibularDente12, denteHeight: 39, graphicLineHeight: 5, denteWidth: 90 },
+    { denteNumber: 11, denteIcon: vestibularDente11, denteHeight: 51, graphicLineHeight: 5.3, denteWidth: 127 },
+];
+
+
 const Exame = () => {
     return (
         <section className="vw-100 vh-100 overflow-x-hidden d-flex p-5">
@@ -21,18 +33,18 @@ const Exame = () => {
                     <div className="d-flex flex-column mx-5">
                         <p className="fw-bold">Profundidade de sondagem</p>
                         <p className="fw-bold">Margem gengival</p>
+                        <p className="fs-2 mt-7">Vestibular</p>
                     </div>
-
+                    
                     <div className="w-50 d-flex justify-content-center align-items-center">
+
                         <GraphicExameLines />
-                        <DenteComponent denteIcon={vestibularDente18} height={56} graphicLineHeight={0.6} denteWidth={93}/>
-                        <DenteComponent denteIcon={vestibularDente17} height={51} graphicLineHeight={0.9} denteWidth={98}/>
-                        <DenteComponent denteIcon={vestibularDente16} height={53} graphicLineHeight={1.2} denteWidth={105}/>
-                        <DenteComponent denteIcon={vestibularDente15} height={45} graphicLineHeight={3.4} denteWidth={90}/>
-                        <DenteComponent denteIcon={vestibularDente14} height={35} graphicLineHeight={3.850} denteWidth={93}/>
-                        <DenteComponent denteIcon={vestibularDente13} height={7} graphicLineHeight={6} denteWidth={95}/>
-                        <DenteComponent denteIcon={vestibularDente12} height={39} graphicLineHeight={5} denteWidth={90}/>
-                        <DenteComponent denteIcon={vestibularDente11} height={51} graphicLineHeight={5.3} denteWidth={127}/>
+                        {
+                            dentesList.map((dente) => (
+                                <DenteComponent denteNumber={dente.denteNumber} denteIcon={dente.denteIcon} height={dente.denteHeight} graphicLineHeight={dente.graphicLineHeight} denteWidth={dente.denteWidth}/>
+                            ))
+                        }
+
                     </div>
                 </div>
             </div>

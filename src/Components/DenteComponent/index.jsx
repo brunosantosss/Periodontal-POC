@@ -5,7 +5,7 @@ import DenteDrawLinePS from "./DenteDrawLinePS";
 
 import style from "./index.module.css";
 
-const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100 }) => {
+const DenteComponent = ({ denteNumber, denteIcon, height, graphicLineHeight, denteWidth = 100 }) => {
 
     const [ valuePSCord1, setValuePSCord1 ] = useState(0);
     const [ valuePSCord2, setValuePSCord2 ] = useState(0);
@@ -20,12 +20,13 @@ const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100
             <div className="h-100 d-flex flex-column gap-5">
                 <div className="w-100 d-flex flex-column border">
                     <div className="d-flex flex-column border-bottom p-1">
+                        <p className="text-center fw-bold fs-5 border-bottom p-1">{denteNumber}</p>
                         <div className="w-100 d-flex">
                             <input type="number" id="PS_Cord1"
                                 className="w-25 flex-fill border border-0"
                                 value={valuePSCord1}
                                 onChange={(e) => {
-                                    setValuePSCord1(parseInt(e.target.value))
+                                    setValuePSCord1(e.target.value > 0 ? e.target.value : 0)
                                 }}
                                 
                                 />
@@ -33,14 +34,14 @@ const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100
                                 className="w-25 flex-fill border border-0"
                                 value={valuePSCord2}
                                 onChange={(e) => {
-                                    setValuePSCord2(parseInt(e.target.value))
+                                    setValuePSCord2(e.target.value > 0 ? e.target.value : 0)
                                 }}
                                 />
                             <input type="number" id="PS_Cord3" 
                                 className="w-25 flex-fill border border-0"
                                 value={valuePSCord3}
                                 onChange={(e) => {
-                                    setValuePSCord3(parseInt(e.target.value))
+                                    setValuePSCord3(e.target.value > 0 ? e.target.value : 0)
                                 }}
                                 />
                         </div>
@@ -51,21 +52,21 @@ const DenteComponent = ({ denteIcon, height, graphicLineHeight, denteWidth = 100
                                 className="w-25 flex-fill border border-0"
                                 value={valueMGCord1}
                                 onChange={(e) => {
-                                    setValueMGCord1(parseInt(e.target.value))
+                                    setValueMGCord1(e.target.value > 0 ? e.target.value : 0)
                                 }}
                                 />
                             <input type="number" id="MG_Cord2" 
                                 className="w-25 flex-fill border border-0"
                                 value={valueMGCord2}
                                 onChange={(e) => {
-                                    setValueMGCord2(parseInt(e.target.value))
+                                    setValueMGCord2(e.target.value > 0 ? e.target.value : 0)
                                 }}
                                 />
                             <input type="number" id="MG_Cord3" 
                                 className="w-25 flex-fill border border-0"
                                 value={valueMGCord3}
                                 onChange={(e) => {
-                                    setValueMGCord3(parseInt(e.target.value))
+                                    setValueMGCord3(e.target.value > 0 ? e.target.value : 0)
                                 }}
                             />
                         </div>
