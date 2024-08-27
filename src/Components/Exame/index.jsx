@@ -11,17 +11,19 @@ import vestibularDente11 from "../../assets/dentes/superior/vestibular/png/Dente
 import DenteComponent from "../DenteComponent";
 import GraphicExameLines from "../GraphicExameLines";
 
+import DenteDrawLinePS from "../DenteComponent/DenteDrawLinePS";
+
 import style from "./index.module.css";
 
 const dentesList = [
-    { denteNumber: 18, denteIcon: vestibularDente18, denteHeight: 56, graphicLineHeight: 0.6, denteWidth: 93 },
-    { denteNumber: 17, denteIcon: vestibularDente17, denteHeight: 51, graphicLineHeight: 0.9, denteWidth: 98 },
-    { denteNumber: 16, denteIcon: vestibularDente16, denteHeight: 53, graphicLineHeight: 1.2, denteWidth: 105 },
-    { denteNumber: 15, denteIcon: vestibularDente15, denteHeight: 45, graphicLineHeight: 3.4, denteWidth: 90 },
-    { denteNumber: 14, denteIcon: vestibularDente14, denteHeight: 35, graphicLineHeight: 3.850, denteWidth: 93 },
-    { denteNumber: 13, denteIcon: vestibularDente13, denteHeight: 7, graphicLineHeight: 6, denteWidth: 95 },
-    { denteNumber: 12, denteIcon: vestibularDente12, denteHeight: 39, graphicLineHeight: 5, denteWidth: 90 },
-    { denteNumber: 11, denteIcon: vestibularDente11, denteHeight: 51, graphicLineHeight: 5.3, denteWidth: 127 },
+    { denteNumber: 18, denteIcon: vestibularDente18, denteHeight: 64, graphicLineHeight: 0.6, denteWidth: 100 },
+    { denteNumber: 17, denteIcon: vestibularDente17, denteHeight: 58, graphicLineHeight: 0.9, denteWidth: 100 },
+    { denteNumber: 16, denteIcon: vestibularDente16, denteHeight: 58, graphicLineHeight: 1.2, denteWidth: 100 },
+    { denteNumber: 15, denteIcon: vestibularDente15, denteHeight: 60, graphicLineHeight: 3.4, denteWidth: 100 },
+    { denteNumber: 14, denteIcon: vestibularDente14, denteHeight: 50, graphicLineHeight: 3.850, denteWidth: 100 },
+    { denteNumber: 13, denteIcon: vestibularDente13, denteHeight: 23, graphicLineHeight: 6, denteWidth: 100 },
+    { denteNumber: 12, denteIcon: vestibularDente12, denteHeight: 60, graphicLineHeight: 5, denteWidth: 100 },
+    { denteNumber: 11, denteIcon: vestibularDente11, denteHeight: 68, graphicLineHeight: 5.3, denteWidth: 100 },
 ];
 
 const Exame = () => {
@@ -38,6 +40,7 @@ const Exame = () => {
                     <div className="w-50 d-flex justify-content-center align-items-center">
 
                         <GraphicExameLines />
+                        <DenteDrawLinePS />
                         {
                             dentesList.map((dente) => (
                                 <DenteComponent denteNumber={dente.denteNumber} denteIcon={dente.denteIcon} height={dente.denteHeight} graphicLineHeight={dente.graphicLineHeight} denteWidth={dente.denteWidth}/>
