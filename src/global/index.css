@@ -20,7 +20,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .w-30 { width: 30%; }
 .w-35 { width: 35%; }
 .w-40 { width: 40%; }
+.w-55 { width: 55%; }
 
-.mt-7 {
-    margin-top: 7em;
-}
+.mt-7 { margin-top: 7em; }
+.mb-7 { margin-bottom: 7em; }
+
+.mmb-4 { margin-bottom: 4em; }
+
+.ms-15 { margin-left: 15em; }
+
+.cursor-pointer { cursor: pointer; }
