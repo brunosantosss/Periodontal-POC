@@ -9,12 +9,21 @@ import vestibularDenteImplante13 from "../../assets/dentes/superior/vestibular/p
 import vestibularDenteImplante12 from "../../assets/dentes/superior/vestibular/png/DenteImplante12.svg"
 import vestibularDenteImplante11 from "../../assets/dentes/superior/vestibular/png/DenteImplante11.svg"
 
+import vestibularDenteImplante21 from "../../assets/dentes/superior/vestibular/png/DenteImplante21.svg"
+import vestibularDenteImplante22 from "../../assets/dentes/superior/vestibular/png/DenteImplante22.svg"
+import vestibularDenteImplante23 from "../../assets/dentes/superior/vestibular/png/DenteImplante23.svg"
+import vestibularDenteImplante24 from "../../assets/dentes/superior/vestibular/png/DenteImplante24.svg"
+import vestibularDenteImplante25 from "../../assets/dentes/superior/vestibular/png/DenteImplante25.svg"
+import vestibularDenteImplante26 from "../../assets/dentes/superior/vestibular/png/DenteImplante26.svg"
+import vestibularDenteImplante27 from "../../assets/dentes/superior/vestibular/png/DenteImplante27.svg"
+import vestibularDenteImplante28 from "../../assets/dentes/superior/vestibular/png/DenteImplante28.svg"
+
 import style from "./index.module.css";
 import DenteDesativado from "./DenteDesativado";
 
 const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteImplante = false, denteWidth = 100, denteDesativado }) => {
 
-    const implantesIcons = [vestibularDenteImplante18, vestibularDenteImplante17 ,vestibularDenteImplante16, vestibularDenteImplante15, vestibularDenteImplante14, vestibularDenteImplante13, vestibularDenteImplante12, vestibularDenteImplante11];
+    const implantesIcons = [vestibularDenteImplante18, vestibularDenteImplante17 ,vestibularDenteImplante16, vestibularDenteImplante15, vestibularDenteImplante14, vestibularDenteImplante13, vestibularDenteImplante12, vestibularDenteImplante11, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
 
     return (
         <>
@@ -30,13 +39,15 @@ const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteIm
                         }                               
                         <img 
                             src={ denteImplante ? implantesIcons[denteIndex] : denteIcon} 
-                            className={"position-relative"} 
+                            className={ `position-relative ${ !denteDesativado ? "opacity-50" : ""}`} 
+                            
                             style={ 
                                 denteImplante 
                                 ? 
                                 {top: implanteHeight+"px", width: denteWidth+"%"} 
                                 : 
-                                {top: height+"px", width: denteWidth+"%"} }
+                                {top: height+"px", width: denteWidth+"%"} 
+                            }
                         /> 
                     </div>
                 </div>
