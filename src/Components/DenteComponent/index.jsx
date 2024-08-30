@@ -21,7 +21,7 @@ import vestibularDenteImplante28 from "../../assets/dentes/superior/vestibular/p
 import style from "./index.module.css";
 import DenteDesativado from "./DenteDesativado";
 
-const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteImplante = false, denteWidth = 100, denteDesativado }) => {
+const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteWidth = 100, dentesInfo}) => {
 
     const implantesIcons = [vestibularDenteImplante18, vestibularDenteImplante17 ,vestibularDenteImplante16, vestibularDenteImplante15, vestibularDenteImplante14, vestibularDenteImplante13, vestibularDenteImplante12, vestibularDenteImplante11, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
 
@@ -31,18 +31,18 @@ const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteIm
                 <div className={ style.dente_container + " w-100 h-100 d-flex justify-content-center align-items-center"}>  
                     <div className="position-relative d-flex justify-content-start align-items-center">   
                         {
-                            !denteDesativado ? (
+                            !dentesInfo[denteIndex].dente_ativado ? (
                                 <DenteDesativado />
                             ) : (
                                 <></>
                             )
                         }                               
                         <img 
-                            src={ denteImplante ? implantesIcons[denteIndex] : denteIcon} 
-                            className={ `position-relative ${ !denteDesativado ? "opacity-50" : ""}`} 
+                            src={ dentesInfo[denteIndex].dente_implante ? implantesIcons[denteIndex] : denteIcon} 
+                            className={ `position-relative ${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`} 
                             
                             style={ 
-                                denteImplante 
+                                dentesInfo[denteIndex].dente_implante 
                                 ? 
                                 {top: implanteHeight+"px", width: denteWidth+"%"} 
                                 : 

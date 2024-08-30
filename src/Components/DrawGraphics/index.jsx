@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, setDentesAtivados }) => {
+const DrawGraphics = ({ dentesInfo, setDentesInfo }) => {
     const xCoordsMG = [
         { point_one: 35, point_two: 85, point_three: 130 },
         { point_one: 180, point_two: 230, point_three: 280 },
@@ -89,8 +89,10 @@ const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, set
         <div className="vw-100 h-40 d-flex align-items-center flex-column position-absolute z-2" style={{top: "3.2em"}}>
             <div className='d-flex align-items-center w-75 flex-column'>
                 <div className='d-flex w-100 justify-content-between align-items-end'>
-                    <div className='position-absolute start-0 d-flex top-2 flex-column gap-2 align-items-end'>
+                    <div className='position-absolute start-0 d-flex top-2 flex-column gap-1 align-items-end'>
+                        <p className='fs-4 fw-medium'>Mobilidade</p>
                         <p className='fs-4 fw-medium'>Implante</p>
+                        <p className='fs-4 fw-medium'>Furca</p>
                         <p className='fs-4 fw-medium'>Sangramento a sondagem</p>
                         <p className='fs-4 fw-medium'>Placa</p>
                         <p className='fs-4 fw-medium'>Profundidade de sondagem</p>
@@ -100,76 +102,161 @@ const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, set
                     {dentesYCoordsMG.map((dente, denteIndex) => 
                         <div className='d-flex flex-column border border-2 mx-1 align-items-center'>
                             <p 
-                                className= {`w-100 fw-semibold fs-5 text-center cursor-pointer py-2 px-3 ${dentesAtivados[denteIndex].dente_ativado ? "" : "bg-body-secondary rounded-bottom"}`}
+                                className= {`w-100 fw-semibold fs-5 text-center cursor-pointer py-2 px-3 ${dentesInfo[denteIndex].dente_ativado ? "" : "bg-body-secondary rounded-bottom"}`}
 
                                 onClick={() => {
-                                    const updatedDentesAtivados = [...dentesAtivados];
-                                    updatedDentesAtivados[denteIndex].dente_index = denteIndex;
-                                    updatedDentesAtivados[denteIndex].dente_ativado = !updatedDentesAtivados[denteIndex].dente_ativado;
-                                    setDentesAtivados(updatedDentesAtivados);
+                                    const updateDentesInfo = [...dentesInfo];
+                                    updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                    updateDentesInfo[denteIndex].dente_ativado = !updateDentesInfo[denteIndex].dente_ativado;
+                                    setDentesInfo(updateDentesInfo);
                                 }}
                             >Dente {denteIndex >= 0 && denteIndex <= 7 ? (18 - denteIndex) : 13 + denteIndex}</p>
-                            
+
                             {
-                                dentesAtivados[denteIndex].dente_ativado ? (
-                                    <input className="form-check-input mb-4 p-3" type="checkbox" aria-label="Checkbox for following text input"                                 
-                                        onClick={(e) => {
-                                            const updatedDentesImplantes = [...dentesImplantes];
-                                            updatedDentesImplantes[denteIndex].dente_index = denteIndex;
-                                            updatedDentesImplantes[denteIndex].dente_implante = e.target.checked;
-                                            setDentesImplantes(updatedDentesImplantes);
-                                        }}          
-                                    />
+                                dentesInfo[denteIndex].dente_ativado ? (
+                                    <>
+                                        {/* Mobilidade */}
+                                        <input
+                                            type="number"
+                                            className="form-control mb-3 text-center border-0 border-bottom"
+                                            placeholder={"0"}
+                                            value={dentesInfo[denteIndex].dente_mobilidade}
+                                            onChange={(e) => {
+                                                if ( e.target.value >= 0 && e.target.value <= 3 ) {
+                                                    const updateDentesInfo = [...dentesInfo];
+                                                    updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                                    updateDentesInfo[denteIndex].dente_mobilidade = e.target.value;
+                                                    setDentesInfo(updateDentesInfo);
+                                                }
+                                            }}
+                                        />
+
+                                        {/* Implante */}
+                                        <input className="form-check-input mb-4 p-3 rounded-circle" type="checkbox"                              
+                                            onClick={(e) => {
+                                                const updateDentesInfo = [...dentesInfo];
+                                                updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                                updateDentesInfo[denteIndex].dente_implante = e.target.checked;
+                                                setDentesInfo(updateDentesInfo);
+                                            }}          
+                                        />
+                                        
+                                        {/* Furca */}
+                                        <span className="p-3 bg-danger rounded-circle w-100" type="checkbox"                                       
+                                        onClick={() => {
+                                            const updateDentesInfo = [...dentesInfo];
+                                            updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                            if (updateDentesInfo[denteIndex].dente_nivel_furca[0] >= 3) {
+                                                updateDentesInfo[denteIndex].dente_nivel_furca[0] = 0;
+                                            } else {
+                                                updateDentesInfo[denteIndex].dente_nivel_furca[0] ++;
+                                            }
+                                            setDentesInfo(updateDentesInfo);
+                                        }}
+                                        >.</span>
+                                    </>
                                 ) : (
-                                    <input className="form-check-input mb-4 p-3" type="checkbox" aria-label="Checkbox for following text input"                                 
-                                        disabled          
-                                    />
+                                    <>
+                                        <input
+                                            type="number"
+                                            className="form-control mb-3 text-center border-0 border-bottom"
+                                            placeholder={`0`}
+                                            disabled
+                                        />
+                                        <input
+                                            className="form-check-input mb-4 p-3 rounded-circle" type="checkbox" 
+                                            disabled 
+                                        />
+                                        <input className="form-check-input mb-4 p-3 rounded-circle" type="checkbox" aria-label="Checkbox for following text input"                                 
+                                            disabled          
+                                        />
+                                    </>
                                 )
                             }
 
                             {/* Sangramento a sondagem */}
                             <div key={denteIndex} className="mb-3 w-100 d-flex">
-                                {Object.keys(dente).map((pointName) => (
-                                    <div key={pointName} className='w-100'>
-                                        {
-                                            dentesAtivados[denteIndex].dente_ativado ? (
-                                                <>
-                                                    <input type="checkbox" className="btn-check" id={`btn-check-outlined-ss${denteIndex}`} autocomplete="off"/>
+                                {Array.from({ length: 3 }).map((_, index) =>
+                                    {
+                                        let
+                                            i = 0,
+                                            randIndex = 0
+                                        ;
 
-                                                    <label className="btn btn-outline-primary p-3" for={`btn-check-outlined-ss${denteIndex}`}><span></span></label>
-                                                </>
-                                            ) : (
-                                                <input
-                                                    type="number"
-                                                    className="form-control"
-                                                    disabled
-                                                />
-                                            )
-                                        }
-                                    </div>
-                                ))}
+                                        if (i === 0)
+                                            randIndex = denteIndex + index + Math.random();
+                                        else 
+                                            i ++;
+
+                                        return (
+                                            <div key={index} className='w-100'>
+                                                {
+                                                    dentesInfo[denteIndex].dente_ativado ? (
+                                                        <>
+                                                            <input type="checkbox" className="btn-check" id={`btn-check-outlined-ss${randIndex}`} autocomplete="off"
+                                                                onClick={(e) => {
+                                                                    const updateDentesInfo = [...dentesInfo];
+                                                                    updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                                                    updateDentesInfo[denteIndex].dente_ss[index] = e.target.checked;
+                                                                    setDentesInfo(updateDentesInfo);
+                                                                }} 
+                                                            />
+
+                                                            <label className="btn btn-outline-danger rounded-circle p-3" for={`btn-check-outlined-ss${randIndex}`}><span></span></label>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
+                                                            <label className="btn btn-outline-danger rounded-circle p-3" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                                        </>
+                                                    )
+                                                }
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
+                            
                             {/* Placa */}
                             <div key={denteIndex} className="mb-3 w-100 d-flex">
-                                {Object.keys(dente).map((pointName) => (
-                                    <div key={pointName} className='w-100'>
-                                        {
-                                            dentesAtivados[denteIndex].dente_ativado ? (
-                                                <>
-                                                    <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${denteIndex}`} autocomplete="off"/>
+                                {Array.from({ length: 3 }).map((_, index) => 
+                                    {                       
+                                        let
+                                            i = 0,
+                                            randIndex = 0
+                                        ;
 
-                                                    <label className="btn btn-outline-danger p-3" for={`btn-check-outlined-p${denteIndex}`}><span></span></label>
-                                                </>
-                                            ) : (
-                                                <input
-                                                    type="number"
-                                                    className="form-control"
-                                                    disabled
-                                                />
-                                            )
-                                        }
-                                    </div>
-                                ))}
+                                        if (i === 0)
+                                            randIndex = denteIndex + index + Math.random();
+                                        else 
+                                            i ++;
+
+                                        return (
+                                            <div key={index} className='w-100'>
+                                                {
+                                                    dentesInfo[denteIndex].dente_ativado ? (
+                                                        <>
+                                                            <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off"
+                                                                onClick={(e) => {
+                                                                    const updateDentesInfo = [...dentesInfo];
+                                                                    updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                                                    updateDentesInfo[denteIndex].dente_placa[index] = e.target.checked;
+                                                                    setDentesInfo(updateDentesInfo);
+                                                                }} 
+                                                            />
+                                                            <label className="btn btn-outline-primary rounded-circle p-3" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
+                                                            <label className="btn btn-outline-primary rounded-circle p-3" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                                        </>
+                                                    )
+                                                }
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
 
                             {/* Profundidade de sondagem */}
@@ -177,7 +264,7 @@ const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, set
                                 {Object.keys(dente).map((pointName) => (
                                     <div key={pointName}>
                                         {
-                                            dentesAtivados[denteIndex].dente_ativado ? (
+                                            dentesInfo[denteIndex].dente_ativado ? (
                                                 <input
                                                     type="number"
                                                     className="form-control"
@@ -214,7 +301,7 @@ const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, set
                                 {Object.keys(dente).map((pointName) => (
                                     <div key={pointName}>
                                         {
-                                            dentesAtivados[denteIndex].dente_ativado ? (
+                                            dentesInfo[denteIndex].dente_ativado ? (
                                                 <input
                                                     type="number"
                                                     className="form-control"
@@ -239,7 +326,7 @@ const DrawGraphics = ({ dentesImplantes, setDentesImplantes, dentesAtivados, set
                 </div>
             </div>
 
-            <svg className='inverted' style={{ width: "75%", height: "30em" }}>
+            <svg className='inverted' style={{ width: "75%", height: "22.8em" }}>
                 <polyline fill="blue" stroke="blue" fillOpacity={.6} strokeWidth={5} points={pointsPS} />
                 <polyline fill="red" stroke="red" fillOpacity={.6} strokeWidth={5} points={pointsMG} />
             </svg>

@@ -49,42 +49,43 @@ const listaDentesVestibularesSup = [
 
 const Exame = () => {
 
-    const [dentesImplantes, setDentesImplantes] = useState(
-        Array.from({ length: 16 }, () => ({ dente_index: -1, dente_implante: false }))
-    );
-
-    const [dentesAtivados, setDentesAtivados] = useState(
-        Array.from({ length: 16 }, () => ({ dente_index: -1, dente_ativado: true }))
-    );
+    const [ dentesInfo, setDentesInfo ] = useState(
+        Array.from({ length: 16 }, () => (
+            { 
+                dente_index: -1, 
+                dente_implante: false, 
+                dente_ativado: true, 
+                dente_mobilidade: 0, // Input de mínimo e padrão 0 e máximo 3
+                dente_ss: [false, false, false], // Níveis de Sangramento de sondagem  ( 3 Inputs com valores false ou true )
+                dente_placa: [false, false, false], // Níveis de placa ( 3 Inputs com valores false ou true )
+                dente_nivel_furca: [0, 0], // Nível 0 a Nível 3
+            }
+        ))
+    )
+    
+    console.log("Dentes info: ", dentesInfo);
 
     return (
         <section className="vw-100 vh-100 d-flex pe-5 justify-content-end">
             <div className="w-75 h-100 d-flex align-items-center">
                 <div className= { style.graphic_exam_container + " w-100 d-flex justify-content-center"} >
-                    {/* <div className="d-flex flex-column mx-5">
-                        <p className="fs-2 mt-7">Vestibular</p>
-                    </div> */}
-                    
                     <div className="w-100 d-flex justify-content-center align-items-center">
 
                         <GraphicExameLines  />
                         <DrawGraphics 
-                            dentesImplantes={dentesImplantes}
-                            setDentesImplantes={setDentesImplantes}
-                            dentesAtivados={dentesAtivados}
-                            setDentesAtivados={setDentesAtivados}
+                            setDentesInfo={setDentesInfo}
+                            dentesInfo={dentesInfo}
                         />
                         {
-                            // Carregando componentes dos dentes Vestibulares Superiores Esquerdo
+                            // Carregando componentes dos dentes Vestibulares Superiores
                             listaDentesVestibularesSup.map((dente, index) => (
                                 <DenteComponent 
                                     denteIndex={index} 
                                     denteIcon={dente.denteIcon} 
                                     height={dente.denteHeight} 
-                                    denteImplante={dentesImplantes[index].dente_implante}
                                     denteWidth={dente.denteWidth}
                                     implanteHeight={dente.implanteHeight}
-                                    denteDesativado={dentesAtivados[index].dente_ativado}
+                                    dentesInfo={dentesInfo}
                                 />
                             )) 
                         }
