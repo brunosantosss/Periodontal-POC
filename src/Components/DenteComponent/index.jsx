@@ -18,8 +18,10 @@ import vestibularDenteImplante26 from "../../assets/dentes/superior/vestibular/p
 import vestibularDenteImplante27 from "../../assets/dentes/superior/vestibular/png/DenteImplante27.svg"
 import vestibularDenteImplante28 from "../../assets/dentes/superior/vestibular/png/DenteImplante28.svg"
 
-import style from "./index.module.css";
 import DenteDesativado from "./DenteDesativado";
+import DenteFurca from "./DenteFurca";
+
+import style from "./index.module.css";
 
 const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteWidth = 100, dentesInfo}) => {
 
@@ -36,9 +38,19 @@ const DenteComponent = ({ denteIndex, denteIcon, height, implanteHeight, denteWi
                             ) : (
                                 <></>
                             )
-                        }                               
+                        }    
+                        {
+                            (dentesInfo[denteIndex].dente_ativado && !dentesInfo[denteIndex].dente_implante) && dentesInfo[denteIndex].dente_nivel_furca[0] > 0 ? (
+                                <DenteFurca 
+                                    denteIndex={denteIndex}
+                                    denteNivelFurca={dentesInfo[denteIndex].dente_nivel_furca[0]}
+                                />
+                            ) : (
+                                <></>
+                            )
+                        }                           
                         <img 
-                            src={ dentesInfo[denteIndex].dente_implante ? implantesIcons[denteIndex] : denteIcon} 
+                            src={ (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) ? implantesIcons[denteIndex] : denteIcon} 
                             className={ `position-relative ${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`} 
                             
                             style={ 

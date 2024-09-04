@@ -63,7 +63,7 @@ const Exame = () => {
         ))
     )
     
-    console.log("Dentes info: ", dentesInfo);
+    // console.log("Dentes info: ", dentesInfo);
 
     return (
         <section className="vw-100 vh-100 d-flex pe-5 justify-content-end">
