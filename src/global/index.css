@@ -39,8 +39,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .ball-bg { background-color: #E2F2EF !important; }
 
 /* sistema furca */
-.bg-furca-nivel2 { background: linear-gradient(to right, black 50%, transparent 50%); }
-.bg-furca-nivel3 { background: linear-gradient(to right, black 100%, transparent 0%); }
+.bg-furca-nivel2 { background: linear-gradient(to right, black 50%, transparent 50%) !important; }
+.bg-furca-nivel3 { background: linear-gradient(to right, black 100%, transparent 0%) !important; }
 
 
 /* bootstrap edit */

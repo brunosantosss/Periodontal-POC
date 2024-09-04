@@ -3,7 +3,7 @@ const Furca = ({ dentesInfo, setDentesInfo, denteIndex }) => {
         return (
             !dentesInfo[denteIndex].dente_implante ? (
                 <span 
-                    className={`form-check-input mb-4 p-3 rounded-circle
+                    className={`form-check-input mb-4 p-3 rounded-circle 
                         ${(denteIndex !== 0 && denteIndex !== 1 && denteIndex !== 2 && denteIndex !== 13 && denteIndex !== 14 && denteIndex !== 15) ? "bg-white border border-white" : ""}
                         ${dentesInfo[denteIndex].dente_nivel_furca[0] === 0 ? " border ball-bg" : ""}
                         ${dentesInfo[denteIndex].dente_nivel_furca[0] === 1 ? " border border-black" : ""}

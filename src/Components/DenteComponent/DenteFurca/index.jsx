@@ -17,7 +17,7 @@ const DenteFurca = ( {denteIndex, denteNivelFurca} ) => {
 
     return (
         <span 
-            className={`position-absolute z-3 p-3 rounded-circle
+            className={`position-absolute z-3 p-3 rounded-circle 
                 ${denteNivelFurca === 0 ? " border ball-bg" : ""}
                 ${denteNivelFurca === 1 ? " border border-black" : ""}
                 ${denteNivelFurca === 2 ? " border border-black bg-furca-nivel2" : ""}
