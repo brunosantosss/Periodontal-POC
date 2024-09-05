@@ -14,7 +14,7 @@ const Placa = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                         i ++;
 
                     return (
-                        <div key={index} className='w-100'>
+                        <div key={index} className='w-100 d-flex justify-content-center'>
                             {
                                 dentesInfo[denteIndex].dente_ativado ? (
                                     <>
