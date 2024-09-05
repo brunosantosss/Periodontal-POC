@@ -1,0 +1,7 @@
+.exame_content_page {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}

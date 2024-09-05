@@ -3,8 +3,8 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import Exame from "../Components/Exame";
 import Inicio from "../Paginas/Inicio";
+import NovoExame from "../Paginas/NovoExame";
 
 const router = createBrowserRouter([
     // Rota principal
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     // Rota novo exame
     { 
       path: "/novo-exame",
-      element: <Exame />,
+      element: <NovoExame />,
     }
   ]);
 
