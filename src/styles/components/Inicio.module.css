@@ -1,0 +1,20 @@
+.buttons_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: var(--main-bg);
+}
+
+.buttons_content_btn {
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 1.4em;
+    transition: .5s;
+}
+
+.buttons_content_btn:hover {
+    color: var(--white);
+    background-color: #e08926;
+}

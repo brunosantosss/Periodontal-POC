@@ -9,6 +9,8 @@
     --red-line: #EC554A;
     --ball-bg: #E2F2EF;
     --white: #fff;
+    --main-bg: #C5E6DF;
+    --grey: #7d7c9d;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
