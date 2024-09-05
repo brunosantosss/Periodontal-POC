@@ -6,8 +6,7 @@
 .inputinformations_content_inputs {
     width: calc(100% - 250px);
     display: flex;
-    background-color: red;
-    padding: 1em;
+    background-color: rgb(203, 28, 28);
 }
 
 .inputinformations_content_input {
@@ -15,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     padding: .4em;
-    background-color: aqua;
 }
 
 .inputinformations_content_labels {

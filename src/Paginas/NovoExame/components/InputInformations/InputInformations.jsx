@@ -10,7 +10,7 @@ import SangramentoSondagem from "./Inputs/SangramentoSondagem";
 
 const InputInformations = ( {dentesInfo, setDentesInfo} ) => {
     return (
-        <section className={ style.inputinformations_content + " gap-5" }>
+        <section className={ style.inputinformations_content + " gap-1" }>
             <div className={ style.inputinformations_content_labels + " bg-danger"}>
                 <p>Mobilidade</p>
                 <p>Implante</p>
