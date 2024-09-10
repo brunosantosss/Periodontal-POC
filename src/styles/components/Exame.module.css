@@ -1,7 +1,16 @@
 .exame_content_page {
-    width: 100%;
-    min-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 2em;
+    max-width: 1400px;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.exame_content_page_dentes_container {
+    width: 1400px; 
+    max-width: 1400px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }

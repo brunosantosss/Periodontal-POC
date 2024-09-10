@@ -17,8 +17,8 @@ const Placa = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                         <div key={index} className='w-100'>
                             {
                                 dentesInfo[denteIndex].dente_ativado ? (
-                                    <>
-                                        <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off"
+                                    <span>
+                                        <input type="checkbox" className="btn-check" id={`btn-check-outlined-p${randIndex}`} autocomplete="off"
                                             onClick={(e) => {
                                                 const updateDentesInfo = [...dentesInfo];
                                                 updateDentesInfo[denteIndex].dente_index = denteIndex;
@@ -26,13 +26,13 @@ const Placa = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                                                 setDentesInfo(updateDentesInfo);
                                             }} 
                                         />
-                                        <label className="btn btn-outline-primary rounded-circle p-3" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
-                                    </>
+                                        <label className= { "btn btn-outline-primary rounded-circle circle-input" } for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                    </span>
                                 ) : (
-                                    <>
-                                        <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
-                                        <label className="btn btn-outline-primary rounded-circle p-3 opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
-                                    </>
+                                    <span>
+                                        <input type="checkbox" className="btn-check" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
+                                        <label className="btn btn-outline-primary rounded-circle opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                    </span>
                                 )
                             }
                         </div>

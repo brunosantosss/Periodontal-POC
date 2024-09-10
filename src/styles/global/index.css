@@ -19,31 +19,11 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.w-15 { width: 15%; }
-.w-20 { width: 20%; }
-.w-30 { width: 30%; }
-.w-35 { width: 35%; }
-.w-40 { width: 40%; }
-.w-55 { width: 55%; }
-.w-98 { width: 98%; }
-
-.mt-7 { margin-top: 7em; }
-.mb-7 { margin-bottom: 7em; }
-.mmb-4 { margin-bottom: 4em; }
-
-.top-2 { top: 4em; }
-
-.cursor-pointer { cursor: pointer; }
-
-.inverted-y { transform: scaleY(-1); }
-.inverted-x { transform: scaleX(-1); }
-
 .ball-bg { background-color: #E2F2EF !important; }
 
 /* sistema furca */
 .bg-furca-nivel2 { background: linear-gradient(to right, black 50%, transparent 50%) !important; }
 .bg-furca-nivel3 { background: linear-gradient(to right, black 100%, transparent 0%) !important; }
-
 
 /* bootstrap edit */
 .btn-outline-primary {
@@ -82,4 +62,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .form-check-input:checked[type=checkbox] {
     --bs-form-check-bg-image: "" !important;
+}
+
+.circle-input {
+    padding: 8px !important;
 }

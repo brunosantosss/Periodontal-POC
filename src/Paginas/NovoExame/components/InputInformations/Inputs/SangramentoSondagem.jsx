@@ -17,7 +17,7 @@ const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                         <div key={index} className='w-100'>
                             {
                                 dentesInfo[denteIndex].dente_ativado ? (
-                                    <>
+                                    <span>
                                         <input type="checkbox" className="btn-check" id={`btn-check-outlined-ss${randIndex}`} autocomplete="off"
                                             onClick={(e) => {
                                                 const updateDentesInfo = [...dentesInfo];
@@ -26,14 +26,14 @@ const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                                                 setDentesInfo(updateDentesInfo);
                                             }} 
                                         />
-
-                                        <label className="btn btn-outline-danger rounded-circle p-3" for={`btn-check-outlined-ss${randIndex}`}><span></span></label>
-                                    </>
+                                        <label className={ "btn btn-outline-danger rounded-circle circle-input" } for={`btn-check-outlined-ss${randIndex}`}
+                                        ><span></span></label>
+                                    </span>
                                 ) : (
-                                    <>
+                                    <span>
                                         <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
-                                        <label className="btn btn-outline-danger rounded-circle p-3 opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
-                                    </>
+                                        <label className="btn btn-outline-danger rounded-circle opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                    </span>
                                 )
                             }
                         </div>

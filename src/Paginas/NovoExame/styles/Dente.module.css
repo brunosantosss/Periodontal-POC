@@ -1,0 +1,4 @@
+.img_div img {
+    width: auto !important;
+    max-width: 75px;
+}
