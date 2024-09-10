@@ -1,21 +1,20 @@
-// import vestibularDente18 from "../../../../assets/Dentes/Dentes/18 - f.png";
-import vestibularDente18 from "../../../../assets/Dentes/Dentes/18 - f .png";
-import vestibularDente17 from "../../../../assets/Dentes/Dentes/17 - f.png";
-import vestibularDente16 from "../../../../assets/Dentes/Dentes/16 - f.png";
-import vestibularDente15 from "../../../../assets/Dentes/Dentes/15 - f.png";
-import vestibularDente14 from "../../../../assets/Dentes/Dentes/14 - f.png";
-import vestibularDente13 from "../../../../assets/Dentes/Dentes/13 - f.png";
-import vestibularDente12 from "../../../../assets/Dentes/Dentes/12 - f.png";
-import vestibularDente11 from "../../../../assets/Dentes/Dentes/11 - f.png";
+import vestibularDente18 from "../../../../assets/Dentes/18 - f .svg";
+import vestibularDente17 from "../../../../assets/Dentes/17 - f.svg";
+import vestibularDente16 from "../../../../assets/Dentes/16 - f.svg";
+import vestibularDente15 from "../../../../assets/Dentes/15 - f.svg";
+import vestibularDente14 from "../../../../assets/Dentes/14 - f.svg";
+import vestibularDente13 from "../../../../assets/Dentes/13 - f.svg";
+import vestibularDente12 from "../../../../assets/Dentes/12 - f.svg";
+import vestibularDente11 from "../../../../assets/Dentes/11 - f.svg";
 
-import vestibularDente21 from "../../../../assets/Dentes/Dentes/21 - f.png";
-import vestibularDente22 from "../../../../assets/Dentes/Dentes/22 - f.png";
-import vestibularDente23 from "../../../../assets/Dentes/Dentes/23 - f.png";
-import vestibularDente24 from "../../../../assets/Dentes/Dentes/24 - f.png";
-import vestibularDente25 from "../../../../assets/Dentes/Dentes/25 - f.png";
-import vestibularDente26 from "../../../../assets/Dentes/Dentes/26 - f.png";
-import vestibularDente27 from "../../../../assets/Dentes/Dentes/27 - f.png";
-import vestibularDente28 from "../../../../assets/Dentes/Dentes/28 - f.png";
+import vestibularDente21 from "../../../../assets/Dentes/21 - f.svg";
+import vestibularDente22 from "../../../../assets/Dentes/22 - f.svg";
+import vestibularDente23 from "../../../../assets/Dentes/23 - f.svg";
+import vestibularDente24 from "../../../../assets/Dentes/24 - f.svg";
+import vestibularDente25 from "../../../../assets/Dentes/25 - f.svg";
+import vestibularDente26 from "../../../../assets/Dentes/26 - f.svg";
+import vestibularDente27 from "../../../../assets/Dentes/27 - f.svg";
+import vestibularDente28 from "../../../../assets/Dentes/28 - f.svg";
 
 import style from "../../styles/Dente.module.css";
 
