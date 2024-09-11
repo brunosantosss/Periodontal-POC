@@ -22,7 +22,7 @@ const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG })
                             <input
                                 type="number"
                                 value={""}
-                                className="form-control bg-white opacity-0"
+                                className="form-control p-1 bg-white opacity-0"
                                 disabled
                             />
                         )

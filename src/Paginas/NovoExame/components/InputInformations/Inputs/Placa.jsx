@@ -31,7 +31,7 @@ const Placa = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                                 ) : (
                                     <span>
                                         <input type="checkbox" className="btn-check" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
-                                        <label className="btn btn-outline-primary rounded-circle opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                        <label className="btn btn-outline-primary rounded-circle circle-input opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label> 
                                     </span>
                                 )
                             }

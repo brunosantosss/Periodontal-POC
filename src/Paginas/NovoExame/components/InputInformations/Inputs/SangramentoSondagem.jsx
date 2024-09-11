@@ -32,7 +32,7 @@ const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                                 ) : (
                                     <span>
                                         <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
-                                        <label className="btn btn-outline-danger rounded-circle opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
+                                        <label className="btn btn-outline-danger rounded-circle circle-input opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
                                     </span>
                                 )
                             }

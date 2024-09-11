@@ -11,6 +11,11 @@
     --white: #fff;
     --main-bg: #C5E6DF;
     --grey: #7d7c9d;
+    --weak-purple: #8180A4;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Isidora Sans";
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -19,7 +24,18 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+/* Utils class */
+.inverted-y { transform: scaleY(-1); }
+.inverted-x { transform: scaleX(-1); }
+.pointer { cursor: pointer; }
+
+/* Backgrounds */
+.bg-blue-line { background-color: var(--blue-line); }
+.bg-weak-purple { background-color: var(--weak-purple); }
 .ball-bg { background-color: #E2F2EF !important; }
+
+/* Fonts colors */
+.text-weak-purple { color: var(--weak-purple); }
 
 /* sistema furca */
 .bg-furca-nivel2 { background: linear-gradient(to right, black 50%, transparent 50%) !important; }

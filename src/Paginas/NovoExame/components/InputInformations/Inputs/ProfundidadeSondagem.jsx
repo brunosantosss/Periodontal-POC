@@ -24,7 +24,7 @@ const ProfundidadeSondagem = ({ dente, dentesInfo, denteIndex, handleYInputChang
                                 <input
                                     type="number"
                                     value={""}
-                                    className="form-control opacity-0"
+                                    className="form-control p-1 opacity-0"
                                     disabled
                                 />
                             )
