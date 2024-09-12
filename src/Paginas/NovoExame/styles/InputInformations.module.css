@@ -4,7 +4,8 @@
 }
 
 .inputinformations_content_inputs {
-    width: calc(100% - 200px);
+    width: calc(100% - 220px);
+    height: 100%;
     display: flex;
 }
 
@@ -12,11 +13,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75px;
+    width: 74px;
 }
 
 .inputinformations_content_labels {
-    width: 200px;
+    width: 220px;
     text-align: end;
     padding-top: 2.6em;
+    line-height: 1.45em;
+    font-weight: 560;
 }

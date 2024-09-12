@@ -5,6 +5,7 @@ import style from "../../styles/components/Exame.module.css";
 import InputInformations from "./components/InputInformations/InputInformations";
 
 import Dente from "./components/Dente"
+import Grafico from "./components/Grafico";
 
 const NovoExame = () => {
     // Objeto vai armazenar as informações dos dentes.
@@ -30,14 +31,30 @@ const NovoExame = () => {
         Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
     );
 
+    const handleYInputChangeMG = (denteIndex, pointName, value) => {
+        const updatedDentes = dentesYCoordsMG.map((dente, index) =>
+            index === denteIndex ? { ...dente, [pointName]: Number(value) } : dente
+        );
+        setDentesYCoordsMG(updatedDentes);
+    };
+    
+    const handleYInputChangePS = (denteIndex, pointName, value) => {
+        const updatedDentes = dentesYCoordsPS.map((dente, index) =>
+            index === denteIndex ? { ...dente, [pointName]: Number(value) } : dente
+        );
+        setDentesYCoordsPS(updatedDentes);
+    };
+    
     return (
         <section id="exame-content-page" className={ style.exame_content_page }>
             <InputInformations 
                 dentesInfo={dentesInfo}
                 setDentesInfo={setDentesInfo}
                 dentesYCoordsMG={dentesYCoordsMG}
-                setDentesYCoordsMG={setDentesYCoordsMG}
                 dentesYCoordsPS={dentesYCoordsPS}
+                handleYInputChangeMG={handleYInputChangeMG}
+                handleYInputChangePS={handleYInputChangePS}
+                setDentesYCoordsMG={setDentesYCoordsMG}
                 setDentesYCoordsPS={setDentesYCoordsPS}
             />
             <div className={ style.exame_content_page_dentes_container }>        
@@ -46,6 +63,10 @@ const NovoExame = () => {
                         <Dente dentesInfo={dentesInfo} denteIndex={index} />
                     ))
                 }
+                <Grafico 
+                    dentesYCoordsMG={dentesYCoordsMG}
+                    dentesYCoordsPS={dentesYCoordsPS}
+                />
             </div>
         </section>
     )
