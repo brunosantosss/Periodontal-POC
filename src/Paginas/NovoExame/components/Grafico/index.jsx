@@ -67,14 +67,14 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS} ) => {
                 fill="#5252A2" 
                 stroke="#5252A2" 
                 fillOpacity={.6} 
-                strokeWidth={5} 
+                strokeWidth={3} 
                 points={`${xCoordsPS[0].point_one}, 0 ` + pointsPS + ` ${xCoordsPS[15].point_three}, 0`} 
             />
             <polyline 
                 fill="red" 
                 stroke="red" 
                 fillOpacity={0} 
-                strokeWidth={4} 
+                strokeWidth={2} 
                 points={`${xCoordsMG[0].point_one}, 0 ` + pointsMG + ` ${xCoordsMG[15].point_three}, 0`} 
             />
         </svg>

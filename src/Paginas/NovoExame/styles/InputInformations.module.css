@@ -19,7 +19,13 @@
 .inputinformations_content_labels {
     width: 220px;
     text-align: end;
-    padding-top: 2.6em;
-    line-height: 1.45em;
+    padding-top: 2em;
     font-weight: 560;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inputinformations_content_labels > p {
+    margin-bottom: 0px;
 }

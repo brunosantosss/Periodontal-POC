@@ -14,6 +14,10 @@
     --weak-purple: #8180A4;
 }
 
+html, #root {
+    overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     font-family: "Isidora Sans";
 }
@@ -42,6 +46,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .bg-furca-nivel3 { background: linear-gradient(to right, black 100%, transparent 0%) !important; }
 
 /* bootstrap edit */
+.input-padding {
+    padding: 0.01rem !important;
+}
+
 .btn-outline-primary {
     --bs-btn-color: var(--blue-line) !important;
     --bs-btn-border-color: var(--blue-line) !important;

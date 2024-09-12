@@ -7,6 +7,9 @@ import InputInformations from "./components/InputInformations/InputInformations"
 import Dente from "./components/Dente"
 import Grafico from "./components/Grafico";
 
+import Navbar from "../../Components/common/Navbar";
+import Footer from "../../Components/common/Footer";
+
 const NovoExame = () => {
     // Objeto vai armazenar as informações dos dentes.
     const [ dentesInfo, setDentesInfo ] = useState(
@@ -46,29 +49,35 @@ const NovoExame = () => {
     };
     
     return (
-        <section id="exame-content-page" className={ style.exame_content_page }>
-            <InputInformations 
-                dentesInfo={dentesInfo}
-                setDentesInfo={setDentesInfo}
-                dentesYCoordsMG={dentesYCoordsMG}
-                dentesYCoordsPS={dentesYCoordsPS}
-                handleYInputChangeMG={handleYInputChangeMG}
-                handleYInputChangePS={handleYInputChangePS}
-                setDentesYCoordsMG={setDentesYCoordsMG}
-                setDentesYCoordsPS={setDentesYCoordsPS}
-            />
-            <div className={ style.exame_content_page_dentes_container }>        
-                {
-                    dentesInfo.map((_, index) => (
-                        <Dente dentesInfo={dentesInfo} denteIndex={index} />
-                    ))
-                }
-                <Grafico 
-                    dentesYCoordsMG={dentesYCoordsMG}
-                    dentesYCoordsPS={dentesYCoordsPS}
-                />
+        <>
+            <Navbar />
+            <div className="teste overflow-x-auto">    
+                <section id="exame-content-page" className={ style.exame_content_page }>
+                    <InputInformations 
+                        dentesInfo={dentesInfo}
+                        setDentesInfo={setDentesInfo}
+                        dentesYCoordsMG={dentesYCoordsMG}
+                        dentesYCoordsPS={dentesYCoordsPS}
+                        handleYInputChangeMG={handleYInputChangeMG}
+                        handleYInputChangePS={handleYInputChangePS}
+                        setDentesYCoordsMG={setDentesYCoordsMG}
+                        setDentesYCoordsPS={setDentesYCoordsPS}
+                    />
+                    <div className={ style.exame_content_page_dentes_container }>        
+                        {
+                            dentesInfo.map((_, index) => (
+                                <Dente dentesInfo={dentesInfo} denteIndex={index} />
+                            ))
+                        }
+                        {/* <Grafico 
+                            dentesYCoordsMG={dentesYCoordsMG}
+                            dentesYCoordsPS={dentesYCoordsPS}
+                        /> */}
+                    </div>
+                </section>
             </div>
-        </section>
+            <Footer />
+        </>
     )
 };
 

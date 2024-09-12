@@ -1,6 +1,6 @@
 const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
     return (
-        <div key={denteIndex} className="mb-3 w-100 d-flex">
+        <div key={denteIndex} className="w-100 border d-flex justify-content-center py-2">
             {Array.from({ length: 3 }).map((_, index) =>
                 {
                     let
@@ -14,10 +14,10 @@ const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                         i ++;
 
                     return (
-                        <div key={index} className='w-100'>
+                        <div key={index} className="w-100 d-flex justify-content-center">
                             {
                                 dentesInfo[denteIndex].dente_ativado ? (
-                                    <span>
+                                    <span className="d-flex">
                                         <input type="checkbox" className="btn-check" id={`btn-check-outlined-ss${randIndex}`} autocomplete="off"
                                             onClick={(e) => {
                                                 const updateDentesInfo = [...dentesInfo];
