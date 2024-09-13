@@ -2,6 +2,12 @@
     width: 100%;
 }
 
+@media (max-width: 880px) {
+    .footer_content p {
+        color: red !important;
+    }
+}
+
 @media (max-width: 764px) {
     .footer_content p {
         font-size: 20px;

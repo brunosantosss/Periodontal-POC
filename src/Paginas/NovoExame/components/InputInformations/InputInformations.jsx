@@ -55,9 +55,9 @@ const InputInformations = ( {dentesInfo, setDentesInfo, dentesYCoordsMG, dentesY
                                     <Mobilidade dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
                                     <Implante dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
                                     <Furca dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
-                                    <Furca dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
-                                    {/* <SangramentoSondagem dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
-                                    <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/> */}
+
+                                    <SangramentoSondagem dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
+                                    <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index}/>
 
                                     <ProfundidadeSondagem dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} />                         
                                     <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} />

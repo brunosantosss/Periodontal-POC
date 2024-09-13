@@ -1,11 +1,12 @@
-.img_div img {
-<<<<<<< HEAD
+.dentes_container {
+    position: relative;
+}
+
+.dentes_container img {
     width: 75px !important;
     max-width: 75px;
     height: 264px;
-=======
     width: 80px;
     height: 257px;
     /* max-width: 80px; */
->>>>>>> 6bd0d1eb2c9c3482a3a3fce8948aeb5aa61cf0c9
 }

@@ -18,12 +18,14 @@ const Mobilidade = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                 />
             </div>
         ) : (
-            <input
-                type="number"
-                className="form-control mb-3 text-center border-0 border-bottom opacity-0"
-                placeholder={`0`}
-                disabled
-            />
+            <div className="w-100 border d-flex justify-content-center py-1">
+                <input
+                    type="number"
+                    className="form-control text-center border-0 bg-transparent p-0 opacity-0"
+                    placeholder={`0`}
+                    disabled
+                />
+            </div>
         )
     )
 };

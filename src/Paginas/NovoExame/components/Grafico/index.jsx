@@ -1,42 +1,42 @@
 const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS} ) => {
     const xCoordsMG = [
-        { point_one: 145, point_two: 180, point_three: 210 },
-        { point_one: 228, point_two: 260, point_three: 290 },
-        { point_one: 305, point_two: 350, point_three: 390 },
-        { point_one: 405, point_two: 428, point_three: 450 },
-        { point_one: 470, point_two: 490, point_three: 510 },
-        { point_one: 530, point_two: 553, point_three: 575 },
-        { point_one: 600, point_two: 620, point_three: 640 },
-        { point_one: 665, point_two: 691, point_three: 715 },
+        { point_one: 130, point_two: 158, point_three: 185 },
+        { point_one: 205, point_two: 232, point_three: 260 },
+        { point_one: 275, point_two: 308, point_three: 340 },
+        { point_one: 358, point_two: 385, point_three: 410 },
+        { point_one: 433, point_two: 456, point_three: 478 },
+        { point_one: 503, point_two: 528, point_three: 555 },
+        { point_one: 585, point_two: 613, point_three: 637 },
+        { point_one: 663, point_two: 688, point_three: 708 },
 
-        { point_one: 740, point_two: 765, point_three: 792 },
-        { point_one: 815, point_two: 838, point_three: 858 },
-        { point_one: 880, point_two: 905, point_three: 930 },
-        { point_one: 950, point_two: 968, point_three: 990 },
-        { point_one: 1008, point_two: 1030, point_three: 1050 },
-        { point_one: 1070, point_two: 1110, point_three: 1152 },
-        { point_one: 1170, point_two: 1200, point_three: 1230 },
-        { point_one: 1250, point_two: 1281, point_three: 1310 },
+        { point_one: 732, point_two: 755, point_three: 777 },
+        { point_one: 803, point_two: 828, point_three: 855 },
+        { point_one: 885, point_two: 913, point_three: 937 },
+        { point_one: 963, point_two: 985, point_three: 1006 },
+        { point_one: 1030, point_two: 1055, point_three: 1082 },
+        { point_one: 1100, point_two: 1133, point_three: 1166 },
+        { point_one: 1180, point_two: 1208, point_three: 1235 },
+        { point_one: 1255, point_two: 1283, point_three: 1310 },
     ];
 
     const xCoordsPS = [
-        { point_one: 145, point_two: 180, point_three: 210 },
-        { point_one: 228, point_two: 260, point_three: 290 },
-        { point_one: 305, point_two: 350, point_three: 390 },
-        { point_one: 405, point_two: 428, point_three: 450 },
-        { point_one: 470, point_two: 490, point_three: 510 },
-        { point_one: 530, point_two: 553, point_three: 575 },
-        { point_one: 600, point_two: 620, point_three: 640 },
-        { point_one: 665, point_two: 691, point_three: 715 },
+        { point_one: 130, point_two: 158, point_three: 185 },
+        { point_one: 205, point_two: 232, point_three: 260 },
+        { point_one: 275, point_two: 308, point_three: 340 },
+        { point_one: 358, point_two: 385, point_three: 410 },
+        { point_one: 433, point_two: 456, point_three: 478 },
+        { point_one: 503, point_two: 528, point_three: 555 },
+        { point_one: 585, point_two: 613, point_three: 637 },
+        { point_one: 663, point_two: 688, point_three: 708 },
 
-        { point_one: 740, point_two: 765, point_three: 792 },
-        { point_one: 815, point_two: 838, point_three: 858 },
-        { point_one: 880, point_two: 905, point_three: 930 },
-        { point_one: 950, point_two: 968, point_three: 990 },
-        { point_one: 1008, point_two: 1030, point_three: 1050 },
-        { point_one: 1070, point_two: 1110, point_three: 1152 },
-        { point_one: 1170, point_two: 1200, point_three: 1230 },
-        { point_one: 1250, point_two: 1281, point_three: 1310 },
+        { point_one: 732, point_two: 755, point_three: 777 },
+        { point_one: 803, point_two: 828, point_three: 855 },
+        { point_one: 885, point_two: 913, point_three: 937 },
+        { point_one: 963, point_two: 985, point_three: 1006 },
+        { point_one: 1030, point_two: 1055, point_three: 1082 },
+        { point_one: 1100, point_two: 1133, point_three: 1166 },
+        { point_one: 1180, point_two: 1208, point_three: 1235 },
+        { point_one: 1255, point_two: 1283, point_three: 1310 },
     ];
 
     const pointsMG = dentesYCoordsMG
@@ -71,8 +71,8 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS} ) => {
                 points={`${xCoordsPS[0].point_one}, 0 ` + pointsPS + ` ${xCoordsPS[15].point_three}, 0`} 
             />
             <polyline 
-                fill="red" 
-                stroke="red" 
+                fill="#EC554A" 
+                stroke="#EC554A" 
                 fillOpacity={0} 
                 strokeWidth={2} 
                 points={`${xCoordsMG[0].point_one}, 0 ` + pointsMG + ` ${xCoordsMG[15].point_three}, 0`} 

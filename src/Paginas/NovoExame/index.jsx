@@ -9,6 +9,7 @@ import Grafico from "./components/Grafico";
 
 import Navbar from "../../Components/common/Navbar";
 import Footer from "../../Components/common/Footer";
+import ListasGrafico from "./components/ListasGrafico";
 
 const NovoExame = () => {
     // Objeto vai armazenar as informações dos dentes.
@@ -51,7 +52,7 @@ const NovoExame = () => {
     return (
         <>
             <Navbar />
-            <div className="teste overflow-x-auto">    
+            <div className="overflow-x-auto">    
                 <section id="exame-content-page" className={ style.exame_content_page }>
                     <InputInformations 
                         dentesInfo={dentesInfo}
@@ -69,10 +70,11 @@ const NovoExame = () => {
                                 <Dente dentesInfo={dentesInfo} denteIndex={index} />
                             ))
                         }
-                        {/* <Grafico 
+                        <Grafico 
                             dentesYCoordsMG={dentesYCoordsMG}
                             dentesYCoordsPS={dentesYCoordsPS}
-                        /> */}
+                        />
+                        <ListasGrafico />
                     </div>
                 </section>
             </div>

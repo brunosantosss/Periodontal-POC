@@ -13,10 +13,12 @@ const Implante = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                 />                         
             </div>
         ) : (
-            <input
-                className="form-check-input mb-3 p-2 rounded-circle opacity-0" type="checkbox" 
-                disabled 
-            />
+            <div className="w-100 border d-flex justify-content-center py-2">
+                <input
+                    className="form-check-input p-2 rounded-circle mt-0 opacity-0" type="checkbox" 
+                    disabled 
+                />
+            </div>
         )
     )
 };

@@ -1,39 +1,30 @@
+import style from "../styles/SangramentoSondagem.module.css";
+
 const SangramentoSondagem = ({ dentesInfo, setDentesInfo, denteIndex }) => {
+    console.log("SS: ", dentesInfo)
+
     return (
         <div key={denteIndex} className="w-100 border d-flex justify-content-center py-2">
             {Array.from({ length: 3 }).map((_, index) =>
                 {
-                    let
-                        i = 0,
-                        randIndex = 0
-                    ;
-
-                    if (i === 0)
-                        randIndex = denteIndex + index + Math.random();
-                    else 
-                        i ++;
-
                     return (
                         <div key={index} className="w-100 d-flex justify-content-center">
                             {
                                 dentesInfo[denteIndex].dente_ativado ? (
                                     <span className="d-flex">
-                                        <input type="checkbox" className="btn-check" id={`btn-check-outlined-ss${randIndex}`} autocomplete="off"
-                                            onClick={(e) => {
+                                        <span 
+                                        className={ dentesInfo[denteIndex].dente_ss[index] ? style.ss_input_activate : style.ss_input_deactivate }
+                                            onClick={() => {
                                                 const updateDentesInfo = [...dentesInfo];
                                                 updateDentesInfo[denteIndex].dente_index = denteIndex;
-                                                updateDentesInfo[denteIndex].dente_ss[index] = e.target.checked;
+                                                updateDentesInfo[denteIndex].dente_ss[index] = !dentesInfo[denteIndex].dente_ss[index];
                                                 setDentesInfo(updateDentesInfo);
-                                            }} 
-                                        />
-                                        <label className={ "btn btn-outline-danger rounded-circle circle-input" } for={`btn-check-outlined-ss${randIndex}`}
-                                        ><span></span></label>
+                                            }}
+                                        ></span>    
+                                                                       
                                     </span>
                                 ) : (
-                                    <span>
-                                        <input type="checkbox" className="btn-check test" id={`btn-check-outlined-p${randIndex}`} autocomplete="off" disabled/>
-                                        <label className="btn btn-outline-danger rounded-circle circle-input opacity-0" for={`btn-check-outlined-p${randIndex}`}><span></span></label>
-                                    </span>
+                                    <span className={style.ss_input_deactivate + " opacity-0"}></span>
                                 )
                             }
                         </div>

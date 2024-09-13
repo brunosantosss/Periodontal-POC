@@ -7,6 +7,7 @@
     width: 1400px;
     margin: 0 auto;
     padding: 2em 0em 2em 0em;
+    gap: 18px;
 }
 
 .exame_content_page_dentes_container {
@@ -15,4 +16,5 @@
     display: flex;
     justify-content: end;
     align-items: end;
+    position: relative;
 }

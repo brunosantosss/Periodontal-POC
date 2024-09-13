@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 // Dentes vestibulares superiores (NORMAL)
->>>>>>> 6bd0d1eb2c9c3482a3a3fce8948aeb5aa61cf0c9
+
 import vestibularDente18 from "../../../../assets/Dentes/18 - f .svg";
 import vestibularDente17 from "../../../../assets/Dentes/17 - f.svg";
 import vestibularDente16 from "../../../../assets/Dentes/16 - f.svg";
@@ -10,17 +8,6 @@ import vestibularDente14 from "../../../../assets/Dentes/14 - f.svg";
 import vestibularDente13 from "../../../../assets/Dentes/13 - f.svg";
 import vestibularDente12 from "../../../../assets/Dentes/12 - f.svg";
 import vestibularDente11 from "../../../../assets/Dentes/11 - f.svg";
-<<<<<<< HEAD
-
-import vestibularDente21 from "../../../../assets/Dentes/21 - f.svg";
-import vestibularDente22 from "../../../../assets/Dentes/22 - f.svg";
-import vestibularDente23 from "../../../../assets/Dentes/23 - f.svg";
-import vestibularDente24 from "../../../../assets/Dentes/24 - f.svg";
-import vestibularDente25 from "../../../../assets/Dentes/25 - f.svg";
-import vestibularDente26 from "../../../../assets/Dentes/26 - f.svg";
-import vestibularDente27 from "../../../../assets/Dentes/27 - f.svg";
-import vestibularDente28 from "../../../../assets/Dentes/28 - f.svg";
-=======
 
 import vestibularDente21 from "../../../../assets/Dentes/21 - f.svg";
 import vestibularDente22 from "../../../../assets/Dentes/22 - f.svg";
@@ -50,7 +37,6 @@ import vestibularDenteImplante26 from "../../../../assets/Dentes/26 - f - i.svg"
 import vestibularDenteImplante27 from "../../../../assets/Dentes/27 - f - i.svg";
 import vestibularDenteImplante28 from "../../../../assets/Dentes/28 - f - i.svg";
 
->>>>>>> 6bd0d1eb2c9c3482a3a3fce8948aeb5aa61cf0c9
 
 import style from "../../styles/Dente.module.css";
 
@@ -64,7 +50,7 @@ const Dente = ({ dentesInfo, denteIndex }) => {
     const denteImplantesImages = [vestibularDenteImplante11, vestibularDenteImplante12, vestibularDenteImplante13, vestibularDenteImplante14, vestibularDenteImplante15, vestibularDenteImplante16, vestibularDenteImplante17, vestibularDenteImplante18, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
 
     return (
-        <div className={ style.img_div }>
+        <div className={ style.dentes_container }>
             {
                 !dentesInfo[denteIndex].dente_ativado ? (
                     <DenteOnOff />

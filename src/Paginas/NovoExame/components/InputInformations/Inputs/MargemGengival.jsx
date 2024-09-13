@@ -13,7 +13,7 @@ const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG })
                                 aria-describedby="basic-addon1"
                                 onChange={
                                     (e) => {
-                                        handleYInputChangeMG(denteIndex, pointName, (e.target.value * 15) || 0)
+                                        handleYInputChangeMG(denteIndex, pointName, (e.target.value * 10) || 0)
                                         
                                     }
                                 }
@@ -22,7 +22,7 @@ const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG })
                             <input
                                 type="number"
                                 value={""}
-                                className="form-control p-1 bg-white opacity-0"
+                                className="form-control border-0 rounded-0 input-padding text-center opacity-0"
                                 disabled
                             />
                         )

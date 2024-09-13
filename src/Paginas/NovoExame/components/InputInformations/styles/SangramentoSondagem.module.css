@@ -1,0 +1,13 @@
+.ss_input_activate {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--red-line);
+}
+
+.ss_input_deactivate {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--ball-bg);
+}

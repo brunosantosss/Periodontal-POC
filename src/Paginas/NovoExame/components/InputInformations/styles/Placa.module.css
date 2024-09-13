@@ -1,0 +1,13 @@
+.placa_input_activate {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--blue-line);
+}
+
+.placa_input_deactivate {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--ball-bg);
+}

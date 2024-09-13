@@ -15,7 +15,7 @@ const ProfundidadeSondagem = ({ dente, dentesInfo, denteIndex, handleYInputChang
                                         aria-describedby="basic-addon1"
                                         onChange={(e) => {
                                             handleYInputChangePS(denteIndex, pointName, 
-                                                ( ( dentesYCoordsMG[denteIndex][pointName] - ( e.target.value * 15 ) ) ) 
+                                                ( ( dentesYCoordsMG[denteIndex][pointName] - ( e.target.value * 10 ) ) ) 
                                             || 0)}
                                         }
                                     />
@@ -24,7 +24,7 @@ const ProfundidadeSondagem = ({ dente, dentesInfo, denteIndex, handleYInputChang
                                 <input
                                     type="number"
                                     value={""}
-                                    className="form-control p-1 opacity-0"
+                                    className="form-control border-0 rounded-0 input-padding text-center opacity-0"
                                     disabled
                                 />
                             )

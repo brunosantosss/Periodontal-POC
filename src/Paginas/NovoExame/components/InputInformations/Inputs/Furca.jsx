@@ -27,12 +27,16 @@ const Furca = ({ dentesInfo, setDentesInfo, denteIndex }) => {
                     ></span>
                 </div>
             ) : (
-                <span className={`form-check-input mb-3 p-2 rounded-circle opacity-0`} type="checkbox" disabled></span>
+                <div className="w-100 border d-flex justify-content-center py-2">
+                    <span className="form-check-input p-2 rounded-circle mt-0 opacity-0" type="checkbox" disabled />
+                </div>
             )
         );
     } else {
         return (
-            <span className="form-check-input mb-3 p-2 rounded-circle opacity-0" type="checkbox" disabled />
+            <div className="w-100 border d-flex justify-content-center py-2">
+                <span className="form-check-input p-2 rounded-circle mt-0 opacity-0" type="checkbox" disabled />
+            </div>
         );
     }   
 };
