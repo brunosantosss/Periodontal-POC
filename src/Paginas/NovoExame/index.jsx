@@ -27,21 +27,6 @@ const NovoExame = () => {
         ))
     )
 
-    // DADOS ( DENTES SUPERIORES | PALATINO )
-    const [ supPalDentesInfo, setSupPalDentesInfo ] = useState(
-        Array.from({ length: 16 }, () => (
-            { 
-                supPaldente_index: -1, 
-                supPaldente_implante: false, 
-                supPaldente_ativado: true, 
-                supPaldente_mobilidade: 0,
-                supPaldente_ss: [false, false, false], 
-                supPaldente_placa: [false, false, false],
-                supPaldente_nivel_furca: 0, 
-            }
-        ))
-    )
-
     const [dentesYCoordsMG, setDentesYCoordsMG] = useState(
         Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
     );
