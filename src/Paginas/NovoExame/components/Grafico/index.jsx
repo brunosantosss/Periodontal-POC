@@ -1,4 +1,4 @@
-const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS} ) => {
+const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS, Palatino} ) => {
     const xCoordsMG = [
         { point_one: 130, point_two: 158, point_three: 185 },
         { point_one: 205, point_two: 232, point_three: 260 },
@@ -62,22 +62,45 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS} ) => {
         .join(' ');
 
     return (
-        <svg className='position-absolute inverted-y' style={{width: "1320px", marginBottom: "93px"}} >
-            <polyline 
-                fill="#5252A2" 
-                stroke="#5252A2" 
-                fillOpacity={.6} 
-                strokeWidth={3} 
-                points={`${xCoordsPS[0].point_one}, 0 ` + pointsPS + ` ${xCoordsPS[15].point_three}, 0`} 
-            />
-            <polyline 
-                fill="#EC554A" 
-                stroke="#EC554A" 
-                fillOpacity={0} 
-                strokeWidth={2} 
-                points={`${xCoordsMG[0].point_one}, 0 ` + pointsMG + ` ${xCoordsMG[15].point_three}, 0`} 
-            />
-        </svg>
+        <>
+        {
+            Palatino ? (
+                <svg className='position-absolute' style={{width: "1320px", marginBottom: "15px"}} >
+                    <polyline 
+                        fill="#5252A2" 
+                        stroke="#5252A2" 
+                        fillOpacity={.6} 
+                        strokeWidth={3} 
+                        points={`${xCoordsPS[0].point_one}, 0 ` + pointsPS + ` ${xCoordsPS[15].point_three}, 0`} 
+                    />
+                    <polyline 
+                        fill="#EC554A" 
+                        stroke="#EC554A" 
+                        fillOpacity={0} 
+                        strokeWidth={2} 
+                        points={`${xCoordsMG[0].point_one}, 0 ` + pointsMG + ` ${xCoordsMG[15].point_three}, 0`} 
+                    />
+                </svg>
+            ) : (
+                <svg className='position-absolute inverted-y' style={{width: "1320px", marginBottom: "93px"}} >
+                    <polyline 
+                        fill="#5252A2" 
+                        stroke="#5252A2" 
+                        fillOpacity={.6} 
+                        strokeWidth={3} 
+                        points={`${xCoordsPS[0].point_one}, 0 ` + pointsPS + ` ${xCoordsPS[15].point_three}, 0`} 
+                    />
+                    <polyline 
+                        fill="#EC554A" 
+                        stroke="#EC554A" 
+                        fillOpacity={0} 
+                        strokeWidth={2} 
+                        points={`${xCoordsMG[0].point_one}, 0 ` + pointsMG + ` ${xCoordsMG[15].point_three}, 0`} 
+                    />
+                </svg>
+            )
+        }
+        </>
     )
 };
 

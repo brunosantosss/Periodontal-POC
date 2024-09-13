@@ -12,7 +12,7 @@ import Footer from "../../Components/common/Footer";
 import ListasGrafico from "./components/ListasGrafico";
 
 const NovoExame = () => {
-    // Objeto vai armazenar as informações dos dentes.
+    // DADOS ( DENTES SUPERIORES | VESTIBULAR )
     const [ dentesInfo, setDentesInfo ] = useState(
         Array.from({ length: 16 }, () => (
             { 
@@ -23,6 +23,21 @@ const NovoExame = () => {
                 dente_ss: [false, false, false], 
                 dente_placa: [false, false, false],
                 dente_nivel_furca: 0, 
+            }
+        ))
+    )
+
+    // DADOS ( DENTES SUPERIORES | PALATINO )
+    const [ supPalDentesInfo, setSupPalDentesInfo ] = useState(
+        Array.from({ length: 16 }, () => (
+            { 
+                supPaldente_index: -1, 
+                supPaldente_implante: false, 
+                supPaldente_ativado: true, 
+                supPaldente_mobilidade: 0,
+                supPaldente_ss: [false, false, false], 
+                supPaldente_placa: [false, false, false],
+                supPaldente_nivel_furca: 0, 
             }
         ))
     )
@@ -54,27 +69,51 @@ const NovoExame = () => {
             <Navbar />
             <div className="overflow-x-auto">    
                 <section id="exame-content-page" className={ style.exame_content_page }>
-                    <InputInformations 
-                        dentesInfo={dentesInfo}
-                        setDentesInfo={setDentesInfo}
-                        dentesYCoordsMG={dentesYCoordsMG}
-                        dentesYCoordsPS={dentesYCoordsPS}
-                        handleYInputChangeMG={handleYInputChangeMG}
-                        handleYInputChangePS={handleYInputChangePS}
-                        setDentesYCoordsMG={setDentesYCoordsMG}
-                        setDentesYCoordsPS={setDentesYCoordsPS}
-                    />
-                    <div className={ style.exame_content_page_dentes_container }>        
-                        {
-                            dentesInfo.map((_, index) => (
-                                <Dente dentesInfo={dentesInfo} denteIndex={index} />
-                            ))
-                        }
-                        <Grafico 
+                    <div className={style.exame_content_page_vestibular}>
+                        <InputInformations 
+                            dentesInfo={dentesInfo}
+                            setDentesInfo={setDentesInfo}
                             dentesYCoordsMG={dentesYCoordsMG}
                             dentesYCoordsPS={dentesYCoordsPS}
+                            handleYInputChangeMG={handleYInputChangeMG}
+                            handleYInputChangePS={handleYInputChangePS}
+                            setDentesYCoordsMG={setDentesYCoordsMG}
+                            setDentesYCoordsPS={setDentesYCoordsPS}
+                            Palatino={false}
                         />
-                        <ListasGrafico />
+                        <div className={ style.exame_content_page_dentes_container }>             
+                            {
+                                dentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={dentesInfo} denteIndex={index} Palatino={false}/>
+                                ))
+                            }
+                            <ListasGrafico Palatino={false}/>
+                            <Grafico dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} Palatino={false}/>
+                        </div>
+                    </div>
+
+                    <div className={ style.exame_content_page_palatina }>
+                        <div className={ style.exame_content_page_dentes_container }>             
+                            {
+                                dentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={dentesInfo} denteIndex={index} Palatino={true}/>
+                                ))
+                            }
+                            <ListasGrafico Palatino={true}/>
+                            <Grafico dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} Palatino={true}/>
+                        </div>
+
+                        <InputInformations 
+                            dentesInfo={dentesInfo}
+                            setDentesInfo={setDentesInfo}
+                            dentesYCoordsMG={dentesYCoordsMG}
+                            dentesYCoordsPS={dentesYCoordsPS}
+                            handleYInputChangeMG={handleYInputChangeMG}
+                            handleYInputChangePS={handleYInputChangePS}
+                            setDentesYCoordsMG={setDentesYCoordsMG}
+                            setDentesYCoordsPS={setDentesYCoordsPS}
+                            Palatino={true}
+                        />
                     </div>
                 </section>
             </div>

@@ -10,6 +10,12 @@
     gap: 18px;
 }
 
+.exame_content_page_vestibular, .exame_content_page_palatina {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .exame_content_page_dentes_container {
     width: 1180px; 
     max-width: 1180px;

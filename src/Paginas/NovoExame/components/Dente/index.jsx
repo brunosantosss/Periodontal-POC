@@ -1,4 +1,4 @@
-// Dentes vestibulares superiores (NORMAL)
+// Dentes vestibulares vestibulares superiores (NORMAL)
 
 import vestibularDente18 from "../../../../assets/Dentes/18 - f .svg";
 import vestibularDente17 from "../../../../assets/Dentes/17 - f.svg";
@@ -37,17 +37,46 @@ import vestibularDenteImplante26 from "../../../../assets/Dentes/26 - f - i.svg"
 import vestibularDenteImplante27 from "../../../../assets/Dentes/27 - f - i.svg";
 import vestibularDenteImplante28 from "../../../../assets/Dentes/28 - f - i.svg";
 
+// Dentes palatinos superiores (NORMAL)
+import palatinaDente18 from "../../../../assets/Dentes/18 - v.svg";
+import palatinaDente17 from "../../../../assets/Dentes/17 - v.svg";
+import palatinaDente16 from "../../../../assets/Dentes/16 - v.svg";
+import palatinaDente15 from "../../../../assets/Dentes/15 - v.svg";
+import palatinaDente14 from "../../../../assets/Dentes/14 - v.svg";
+import palatinaDente13 from "../../../../assets/Dentes/13 - v.svg";
+import palatinaDente12 from "../../../../assets/Dentes/12 - v.svg";
+import palatinaDente11 from "../../../../assets/Dentes/11 - v.svg";
+
+import palatinaDente21 from "../../../../assets/Dentes/21 - v.svg";
+import palatinaDente22 from "../../../../assets/Dentes/22 - v.svg";
+import palatinaDente23 from "../../../../assets/Dentes/23 - v.svg";
+import palatinaDente24 from "../../../../assets/Dentes/24 - v.svg";
+import palatinaDente25 from "../../../../assets/Dentes/25 - v.svg";
+import palatinaDente26 from "../../../../assets/Dentes/26 - v.svg";
+import palatinaDente27 from "../../../../assets/Dentes/27 - v.svg";
+import palatinaDente28 from "../../../../assets/Dentes/28 - v.svg";
 
 import style from "../../styles/Dente.module.css";
 
 import DenteOnOff from "../DenteOnOff";
 import DenteFurca from "../DenteFurca";
 
-const Dente = ({ dentesInfo, denteIndex }) => {
+const Dente = ({ dentesInfo, denteIndex, Palatino }) => {
 
-    const denteImages = [vestibularDente11, vestibularDente12, vestibularDente13, vestibularDente14, vestibularDente15, vestibularDente16, vestibularDente17, vestibularDente18, vestibularDente21, vestibularDente22, vestibularDente23, vestibularDente24, vestibularDente25, vestibularDente26, vestibularDente27, vestibularDente28];
+    // Dentes Superiores Vestibular
+    const supVestImages = [
+        vestibularDente11, vestibularDente12, vestibularDente13, vestibularDente14, vestibularDente15, vestibularDente16, vestibularDente17, vestibularDente18, vestibularDente21, vestibularDente22, vestibularDente23, vestibularDente24, vestibularDente25, vestibularDente26, vestibularDente27, vestibularDente28
+    ];
     
-    const denteImplantesImages = [vestibularDenteImplante11, vestibularDenteImplante12, vestibularDenteImplante13, vestibularDenteImplante14, vestibularDenteImplante15, vestibularDenteImplante16, vestibularDenteImplante17, vestibularDenteImplante18, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
+    const implantesSupVestImages = [vestibularDenteImplante11, vestibularDenteImplante12, vestibularDenteImplante13, vestibularDenteImplante14, vestibularDenteImplante15, vestibularDenteImplante16, vestibularDenteImplante17, vestibularDenteImplante18, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
+    
+    // Dentes Superiores Palatina
+    const supPalaImages = [
+        palatinaDente11, palatinaDente12, palatinaDente13, palatinaDente14, palatinaDente15, palatinaDente16, palatinaDente17,
+        palatinaDente18, palatinaDente21, palatinaDente22, palatinaDente23, palatinaDente24, palatinaDente25, palatinaDente26,
+        palatinaDente27, palatinaDente28
+    ]
+    
 
     return (
         <div className={ style.dentes_container }>
@@ -68,17 +97,33 @@ const Dente = ({ dentesInfo, denteIndex }) => {
                     <></>
                 )
             }   
-            <img 
-                className={ `${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`}
-                src={ 
-                    (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) 
-                    ? 
-                    denteImplantesImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
-                    : 
-                    denteImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
-                    style={{width: "100%"}
-                }
-            /> 
+            {
+                !Palatino ? (
+                    <img 
+                        className={ `${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`}
+                        src={ 
+                            (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) 
+                            ? 
+                            implantesSupVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
+                            : 
+                            supVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
+                            style={{width: "100%"}
+                        }
+                    /> 
+                ) : (
+                    <img 
+                        className={ `${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`}
+                        src={ 
+                            (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) 
+                            ? 
+                            implantesSupVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
+                            : 
+                            supPalaImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
+                            style={{width: "100%"}
+                        }
+                    />
+                )
+            }
         </div>
     )
 };
