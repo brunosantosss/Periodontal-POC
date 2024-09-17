@@ -1,6 +1,8 @@
 .inputinformations_content {
     display: flex;
     align-items: top;
+    position: relative;
+    z-index: 2;
 }
 
 .inputinformations_content_inputs {

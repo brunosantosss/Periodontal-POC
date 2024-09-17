@@ -12,7 +12,6 @@ import Footer from "../../Components/common/Footer";
 import ListasGrafico from "./components/ListasGrafico";
 
 const NovoExame = () => {
-    // DADOS ( DENTES SUPERIORES | VESTIBULAR )
     const [ dentesInfo, setDentesInfo ] = useState(
         Array.from({ length: 16 }, () => (
             { 
@@ -20,35 +19,110 @@ const NovoExame = () => {
                 dente_implante: false, 
                 dente_ativado: true, 
                 dente_mobilidade: 0,
-                dente_ss: [false, false, false], 
-                dente_placa: [false, false, false],
-                dente_nivel_furca: 0, 
+                dente_ss: {
+                    vestibular: [false, false, false],
+                    palatina: [false, false, false], 
+                },
+                dente_placa: {
+                    vestibular: [false, false, false],
+                    palatina: [false, false, false],
+                },
+                dente_nivel_furca: {
+                    vestibular: 0,
+                    palatina: [0, 0]
+                }, 
+                dente_grafico_coordenadas: {
+                    vestibular: [0, 0, 0],
+                    palatina: [0, 0],
+                }
             }
         ))
     )
 
-    const [dentesYCoordsMG, setDentesYCoordsMG] = useState(
-        Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
-    );
-    
-    const [dentesYCoordsPS, setDentesYCoordsPS] = useState(
-        Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
-    );
+    const [ pontosYGrafico, setPontosYGrafico ] = useState({
+        superior: {
+            vestibular: {
+                MG: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 })),
+                PS: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
+            }, 
+            palatina: {
+                MG: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 })),
+                PS: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
+            }
+        },
+        inferior: {
+            lingual: {
+                MG: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 })),
+                PS: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
+            },
+            vestibular: {
+                MG: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 })),
+                PS: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
+            }
+        }
+    });
 
-    const handleYInputChangeMG = (denteIndex, pointName, value) => {
-        const updatedDentes = dentesYCoordsMG.map((dente, index) =>
-            index === denteIndex ? { ...dente, [pointName]: Number(value) } : dente
-        );
-        setDentesYCoordsMG(updatedDentes);
+    // Superiores (Vestibulares - MG)  
+    const handleSuperiorVestibularMGy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.superior.vestibular.MG.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            superior: {
+                ...prevObj.superior,
+                vestibular: {
+                    ...prevObj.superior.vestibular, 
+                    MG: updatedDentes
+                }
+            }
+        }));
     };
-    
-    const handleYInputChangePS = (denteIndex, pointName, value) => {
-        const updatedDentes = dentesYCoordsPS.map((dente, index) =>
-            index === denteIndex ? { ...dente, [pointName]: Number(value) } : dente
-        );
-        setDentesYCoordsPS(updatedDentes);
+    // Superiores (Vestibulares - PS)  
+    const handleSuperiorVestibularPSy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.superior.vestibular.PS.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+        
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            superior: {
+                ...prevObj.superior,
+                vestibular: {
+                    ...prevObj.superior.vestibular,
+                    PS: updatedDentes
+                }
+            }
+        }));
     };
-    
+     // Superiores (Palatinas - MG)  
+     const handleSuperiorPalatinoMGy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.superior.palatina.MG.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            superior: {
+                ...prevObj.superior,
+                palatina: {
+                    ...prevObj.superior.palatina, 
+                    MG: updatedDentes
+                }
+            }
+        }));
+    };
+     // Superiores (Palatinas - PS)  
+     const handleSuperiorPalatinoPSy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.superior.palatina.PS.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            superior: {
+                ...prevObj.superior,
+                palatina: {
+                    ...prevObj.superior.palatina, 
+                    PS: updatedDentes
+                }
+            }
+        }));
+    };
+
     return (
         <>
             <Navbar />
@@ -58,12 +132,11 @@ const NovoExame = () => {
                         <InputInformations 
                             dentesInfo={dentesInfo}
                             setDentesInfo={setDentesInfo}
-                            dentesYCoordsMG={dentesYCoordsMG}
-                            dentesYCoordsPS={dentesYCoordsPS}
-                            handleYInputChangeMG={handleYInputChangeMG}
-                            handleYInputChangePS={handleYInputChangePS}
-                            setDentesYCoordsMG={setDentesYCoordsMG}
-                            setDentesYCoordsPS={setDentesYCoordsPS}
+                            dentesYCoordsMG={pontosYGrafico.superior.vestibular.MG}
+                            dentesYCoordsPS={pontosYGrafico.superior.vestibular.PS}
+                            handleYInputChangeMG={handleSuperiorVestibularMGy}
+                            handleYInputChangePS={handleSuperiorVestibularPSy}
+                            setPontosYGrafico={setPontosYGrafico}
                             Palatino={false}
                         />
                         <div className={ style.exame_content_page_dentes_container }>             
@@ -73,7 +146,7 @@ const NovoExame = () => {
                                 ))
                             }
                             <ListasGrafico Palatino={false}/>
-                            <Grafico dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} Palatino={false}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.vestibular.MG} dentesYCoordsPS={pontosYGrafico.superior.vestibular.PS} Palatino={false}/>
                         </div>
                     </div>
 
@@ -85,18 +158,17 @@ const NovoExame = () => {
                                 ))
                             }
                             <ListasGrafico Palatino={true}/>
-                            <Grafico dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} Palatino={true}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.palatina.MG} dentesYCoordsPS={pontosYGrafico.superior.palatina.PS} Palatino={true}/>
                         </div>
 
                         <InputInformations 
                             dentesInfo={dentesInfo}
                             setDentesInfo={setDentesInfo}
-                            dentesYCoordsMG={dentesYCoordsMG}
-                            dentesYCoordsPS={dentesYCoordsPS}
-                            handleYInputChangeMG={handleYInputChangeMG}
-                            handleYInputChangePS={handleYInputChangePS}
-                            setDentesYCoordsMG={setDentesYCoordsMG}
-                            setDentesYCoordsPS={setDentesYCoordsPS}
+                            dentesYCoordsMG={pontosYGrafico.superior.palatina.MG}
+                            dentesYCoordsPS={pontosYGrafico.superior.palatina.PS}
+                            handleYInputChangeMG={handleSuperiorPalatinoMGy}
+                            handleYInputChangePS={handleSuperiorPalatinoPSy}
+                            setPontosYGrafico={setPontosYGrafico}
                             Palatino={true}
                         />
                     </div>

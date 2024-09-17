@@ -37,7 +37,7 @@ import vestibularDenteImplante26 from "../../../../assets/Dentes/26 - f - i.svg"
 import vestibularDenteImplante27 from "../../../../assets/Dentes/27 - f - i.svg";
 import vestibularDenteImplante28 from "../../../../assets/Dentes/28 - f - i.svg";
 
-// Dentes palatinos superiores (NORMAL)
+// Dentes palatinas superiores (NORMAL)
 import palatinaDente18 from "../../../../assets/Dentes/18 - v.svg";
 import palatinaDente17 from "../../../../assets/Dentes/17 - v.svg";
 import palatinaDente16 from "../../../../assets/Dentes/16 - v.svg";
@@ -56,6 +56,25 @@ import palatinaDente26 from "../../../../assets/Dentes/26 - v.svg";
 import palatinaDente27 from "../../../../assets/Dentes/27 - v.svg";
 import palatinaDente28 from "../../../../assets/Dentes/28 - v.svg";
 
+// Dentes palatinas superiores (IMPLANTES)
+import palatinaDenteImplante18 from "../../../../assets/Dentes/18 - v - i.svg";
+import palatinaDenteImplante17 from "../../../../assets/Dentes/17 - v - i.svg";
+import palatinaDenteImplante16 from "../../../../assets/Dentes/16 - v - i.svg";
+import palatinaDenteImplante15 from "../../../../assets/Dentes/15 - v - i.svg";
+import palatinaDenteImplante14 from "../../../../assets/Dentes/14 - v - i.svg";
+import palatinaDenteImplante13 from "../../../../assets/Dentes/13 - v - i.svg";
+import palatinaDenteImplante12 from "../../../../assets/Dentes/12 - v - i.svg";
+import palatinaDenteImplante11 from "../../../../assets/Dentes/11 - v - i.svg";
+
+import palatinaDenteImplante21 from "../../../../assets/Dentes/21 - v - i.svg";
+import palatinaDenteImplante22 from "../../../../assets/Dentes/22 - v - i.svg";
+import palatinaDenteImplante23 from "../../../../assets/Dentes/23 - v - i.svg";
+import palatinaDenteImplante24 from "../../../../assets/Dentes/24 - v - i.svg";
+import palatinaDenteImplante25 from "../../../../assets/Dentes/25 - v - i.svg";
+import palatinaDenteImplante26 from "../../../../assets/Dentes/26 - v - i.svg";
+import palatinaDenteImplante27 from "../../../../assets/Dentes/27 - v - i.svg";
+import palatinaDenteImplante28 from "../../../../assets/Dentes/28 - v - i.svg";
+
 import style from "../../styles/Dente.module.css";
 
 import DenteOnOff from "../DenteOnOff";
@@ -64,19 +83,22 @@ import DenteFurca from "../DenteFurca";
 const Dente = ({ dentesInfo, denteIndex, Palatino }) => {
 
     // Dentes Superiores Vestibular
-    const supVestImages = [
+    const superioresVestibulares = [
         vestibularDente11, vestibularDente12, vestibularDente13, vestibularDente14, vestibularDente15, vestibularDente16, vestibularDente17, vestibularDente18, vestibularDente21, vestibularDente22, vestibularDente23, vestibularDente24, vestibularDente25, vestibularDente26, vestibularDente27, vestibularDente28
     ];
-    
-    const implantesSupVestImages = [vestibularDenteImplante11, vestibularDenteImplante12, vestibularDenteImplante13, vestibularDenteImplante14, vestibularDenteImplante15, vestibularDenteImplante16, vestibularDenteImplante17, vestibularDenteImplante18, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28];
+    const superioresVestibularesImplantes = [
+        vestibularDenteImplante11, vestibularDenteImplante12, vestibularDenteImplante13, vestibularDenteImplante14, vestibularDenteImplante15, vestibularDenteImplante16, vestibularDenteImplante17, vestibularDenteImplante18, vestibularDenteImplante21, vestibularDenteImplante22, vestibularDenteImplante23, vestibularDenteImplante24, vestibularDenteImplante25, vestibularDenteImplante26, vestibularDenteImplante27, vestibularDenteImplante28
+    ];
     
     // Dentes Superiores Palatina
-    const supPalaImages = [
+    const superioresPalatinas = [
         palatinaDente11, palatinaDente12, palatinaDente13, palatinaDente14, palatinaDente15, palatinaDente16, palatinaDente17,
         palatinaDente18, palatinaDente21, palatinaDente22, palatinaDente23, palatinaDente24, palatinaDente25, palatinaDente26,
         palatinaDente27, palatinaDente28
-    ]
-    
+    ];
+    const superioresPalatinasImplantes = [
+        palatinaDenteImplante11, palatinaDenteImplante12, palatinaDenteImplante13, palatinaDenteImplante14, palatinaDenteImplante15, palatinaDenteImplante16, palatinaDenteImplante17, palatinaDenteImplante18, palatinaDenteImplante21, palatinaDenteImplante22, palatinaDenteImplante23, palatinaDenteImplante24, palatinaDenteImplante25, palatinaDenteImplante26, palatinaDenteImplante27, palatinaDenteImplante28
+    ];
 
     return (
         <div className={ style.dentes_container }>
@@ -88,40 +110,41 @@ const Dente = ({ dentesInfo, denteIndex, Palatino }) => {
                 )
             }  
             {
-                (dentesInfo[denteIndex].dente_ativado && !dentesInfo[denteIndex].dente_implante) && dentesInfo[denteIndex].dente_nivel_furca > 0 ? (
+                dentesInfo[denteIndex].dente_ativado && !dentesInfo[denteIndex].dente_implante && (dentesInfo[denteIndex].dente_nivel_furca.vestibular > 0 || (dentesInfo[denteIndex].dente_nivel_furca.palatina[0] > 0 || dentesInfo[denteIndex].dente_nivel_furca.palatina[1] > 0) ) ? (
                     <DenteFurca
                         denteIndex={denteIndex}
-                        denteNivelFurca={dentesInfo[denteIndex].dente_nivel_furca}
+                        denteNivelFurca={Palatino ? dentesInfo[denteIndex].dente_nivel_furca.palatina : dentesInfo[denteIndex].dente_nivel_furca.vestibular}
+                        Palatino={Palatino}
                     />
                 ) : (
                     <></>
                 )
             }   
             {
-                !Palatino ? (
+                Palatino ? (
                     <img 
                         className={ `${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`}
                         src={ 
                             (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) 
                             ? 
-                            implantesSupVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
+                            superioresPalatinasImplantes[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
                             : 
-                            supVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
+                            superioresPalatinas[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
                             style={{width: "100%"}
                         }
-                    /> 
+                    />
                 ) : (
                     <img 
                         className={ `${ !dentesInfo[denteIndex].dente_ativado ? "opacity-50" : ""}`}
                         src={ 
                             (dentesInfo[denteIndex].dente_ativado && dentesInfo[denteIndex].dente_implante) 
                             ? 
-                            implantesSupVestImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
+                            superioresVestibularesImplantes[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]
                             : 
-                            supPalaImages[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
+                            superioresVestibulares[denteIndex >= 0 && denteIndex <= 7 ? (7 - denteIndex) : denteIndex]}
                             style={{width: "100%"}
                         }
-                    />
+                    /> 
                 )
             }
         </div>
