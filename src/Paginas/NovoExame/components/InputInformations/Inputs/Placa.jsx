@@ -1,6 +1,6 @@
 import style from "../styles/Placa.module.css";
 
-const Placa = ({ dentesInfo, setDentesInfo, denteIndex, Palatino }) => {
+const Placa = ({ dentesInfo, setDentesInfo, denteIndex, Frente }) => {
     return (
         <div key={denteIndex} className="w-100 border d-flex justify-content-center py-2">
             {Array.from({ length: 3 }).map((_, index) => 
@@ -11,23 +11,23 @@ const Placa = ({ dentesInfo, setDentesInfo, denteIndex, Palatino }) => {
                                 dentesInfo[denteIndex].dente_ativado ? (
                                     <span className="d-flex">
                                         {
-                                            Palatino ? (
-                                                <span
-                                                    className={ dentesInfo[denteIndex].dente_placa.palatina[index] ? style.placa_input_activate : style.placa_input_deactivate }
-                                                    onClick={() => {
-                                                        const updateDentesInfo = [...dentesInfo];
-                                                        updateDentesInfo[denteIndex].dente_index = denteIndex;
-                                                        updateDentesInfo[denteIndex].dente_placa.palatina[index] = !dentesInfo[denteIndex].dente_placa.palatina[index];
-                                                        setDentesInfo(updateDentesInfo);
-                                                    }}
-                                                />
-                                            ) : (
+                                            Frente ? (
                                                 <span
                                                     className={ dentesInfo[denteIndex].dente_placa.vestibular[index] ? style.placa_input_activate : style.placa_input_deactivate }
                                                     onClick={() => {
                                                         const updateDentesInfo = [...dentesInfo];
                                                         updateDentesInfo[denteIndex].dente_index = denteIndex;
                                                         updateDentesInfo[denteIndex].dente_placa.vestibular[index] = !dentesInfo[denteIndex].dente_placa.vestibular[index];
+                                                        setDentesInfo(updateDentesInfo);
+                                                    }}
+                                                />
+                                            ) : (
+                                                <span
+                                                    className={ dentesInfo[denteIndex].dente_placa.palatina[index] ? style.placa_input_activate : style.placa_input_deactivate }
+                                                    onClick={() => {
+                                                        const updateDentesInfo = [...dentesInfo];
+                                                        updateDentesInfo[denteIndex].dente_index = denteIndex;
+                                                        updateDentesInfo[denteIndex].dente_placa.palatina[index] = !dentesInfo[denteIndex].dente_placa.palatina[index];
                                                         setDentesInfo(updateDentesInfo);
                                                     }}
                                                 />

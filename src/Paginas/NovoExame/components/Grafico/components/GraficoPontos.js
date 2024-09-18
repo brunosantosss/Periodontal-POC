@@ -2,44 +2,121 @@ const pontosGrafico = {
     superior: {
         vestibular: {
             MG: [
-                { point_one: 130, point_two: 158, point_three: 185 },
-                { point_one: 205, point_two: 232, point_three: 260 },
-                { point_one: 275, point_two: 308, point_three: 340 },
-                { point_one: 358, point_two: 385, point_three: 410 },
-                { point_one: 433, point_two: 456, point_three: 478 },
-                { point_one: 503, point_two: 528, point_three: 555 },
-                { point_one: 585, point_two: 613, point_three: 637 },
-                { point_one: 663, point_two: 688, point_three: 708 },
-                { point_one: 732, point_two: 755, point_three: 777 },
-                { point_one: 803, point_two: 828, point_three: 855 },
-                { point_one: 885, point_two: 913, point_three: 937 },
-                { point_one: 963, point_two: 985, point_three: 1006 },
-                { point_one: 1030, point_two: 1055, point_three: 1082 },
-                { point_one: 1100, point_two: 1133, point_three: 1166 },
-                { point_one: 1180, point_two: 1208, point_three: 1235 },
-                { point_one: 1255, point_two: 1283, point_three: 1310 },
+                { point_one: 150, point_two: 180, point_three: 205 },
+                { point_one: 230, point_two: 260, point_three: 290 },
+                { point_one: 310, point_two: 348, point_three: 390 },
+                { point_one: 408, point_two: 430, point_three: 450 },
+                { point_one: 470, point_two: 490, point_three: 510 },
+                { point_one: 533, point_two: 553, point_three: 577 },
+                { point_one: 600, point_two: 620, point_three: 640 },
+                { point_one: 665, point_two: 693, point_three: 715 },
+                { point_one: 745, point_two: 767, point_three: 792 },
+                { point_one: 820, point_two: 838, point_three: 858 },
+                { point_one: 880, point_two: 905, point_three: 928 },
+                { point_one: 950, point_two: 970, point_three: 990 },
+                { point_one: 1010, point_two: 1030, point_three: 1052 },
+                { point_one: 1068, point_two: 1110, point_three: 1152 },
+                { point_one: 1168, point_two: 1200, point_three: 1230 },
+                { point_one: 1250, point_two: 1283, point_three: 1310 },
             ],
             PS: [
-                { point_one: 130, point_two: 158, point_three: 185 },
-                { point_one: 205, point_two: 232, point_three: 260 },
-                { point_one: 275, point_two: 308, point_three: 340 },
-                { point_one: 358, point_two: 385, point_three: 410 },
-                { point_one: 433, point_two: 456, point_three: 478 },
-                { point_one: 503, point_two: 528, point_three: 555 },
-                { point_one: 585, point_two: 613, point_three: 637 },
-                { point_one: 663, point_two: 688, point_three: 708 },
-
-                { point_one: 732, point_two: 755, point_three: 777 },
-                { point_one: 803, point_two: 828, point_three: 855 },
-                { point_one: 885, point_two: 913, point_three: 937 },
-                { point_one: 963, point_two: 985, point_three: 1006 },
-                { point_one: 1030, point_two: 1055, point_three: 1082 },
-                { point_one: 1100, point_two: 1133, point_three: 1166 },
-                { point_one: 1180, point_two: 1208, point_three: 1235 },
-                { point_one: 1255, point_two: 1283, point_three: 1310 },
+                { point_one: 150, point_two: 180, point_three: 205 },
+                { point_one: 230, point_two: 260, point_three: 290 },
+                { point_one: 310, point_two: 348, point_three: 390 },
+                { point_one: 408, point_two: 430, point_three: 450 },
+                { point_one: 470, point_two: 490, point_three: 510 },
+                { point_one: 533, point_two: 553, point_three: 577 },
+                { point_one: 600, point_two: 620, point_three: 640 },
+                { point_one: 665, point_two: 693, point_three: 715 },
+                { point_one: 745, point_two: 767, point_three: 792 },
+                { point_one: 820, point_two: 838, point_three: 858 },
+                { point_one: 880, point_two: 905, point_three: 928 },
+                { point_one: 950, point_two: 970, point_three: 990 },
+                { point_one: 1010, point_two: 1030, point_three: 1052 },
+                { point_one: 1068, point_two: 1110, point_three: 1152 },
+                { point_one: 1168, point_two: 1200, point_three: 1230 },
+                { point_one: 1250, point_two: 1283, point_three: 1310 },
             ]
         },
         palatina: {
+            MG: [
+                { point_one: 145, point_two: 176, point_three: 205 },
+                { point_one: 225, point_two: 255, point_three: 286 },
+                { point_one: 310, point_two: 350, point_three: 382 },
+                { point_one: 408, point_two: 428, point_three: 448 },
+                { point_one: 476, point_two: 495, point_three: 515 },
+                { point_one: 540, point_two: 561, point_three: 580 },
+                { point_one: 600, point_two: 622, point_three: 642 },
+                { point_one: 665, point_two: 690, point_three: 715 },
+                { point_one: 748, point_two: 773, point_three: 796 },
+                { point_one: 818, point_two: 840, point_three: 860 },
+                { point_one: 880, point_two: 900, point_three: 920 },
+                { point_one: 945, point_two: 965, point_three: 985 },
+                { point_one: 1012, point_two: 1035, point_three: 1055 },
+                { point_one: 1075, point_two: 1115, point_three: 1152 },
+                { point_one: 1175, point_two: 1206, point_three: 1238 },
+                { point_one: 1255, point_two: 1287, point_three: 1315 },
+            ],
+            PS: [
+                { point_one: 145, point_two: 176, point_three: 205 },
+                { point_one: 225, point_two: 255, point_three: 286 },
+                { point_one: 310, point_two: 350, point_three: 382 },
+                { point_one: 408, point_two: 428, point_three: 448 },
+                { point_one: 476, point_two: 495, point_three: 515 },
+                { point_one: 540, point_two: 561, point_three: 580 },
+                { point_one: 600, point_two: 622, point_three: 642 },
+                { point_one: 665, point_two: 690, point_three: 715 },
+                { point_one: 748, point_two: 773, point_three: 796 },
+                { point_one: 818, point_two: 840, point_three: 860 },
+                { point_one: 880, point_two: 900, point_three: 920 },
+                { point_one: 945, point_two: 965, point_three: 985 },
+                { point_one: 1012, point_two: 1035, point_three: 1055 },
+                { point_one: 1075, point_two: 1115, point_three: 1152 },
+                { point_one: 1175, point_two: 1206, point_three: 1238 },
+                { point_one: 1255, point_two: 1287, point_three: 1315 },
+            ]
+        }
+    },
+    inferior: {
+        lingual: {
+            MG: [
+                { point_one: 150, point_two: 180, point_three: 215 },
+                { point_one: 245, point_two: 285, point_three: 315 },
+                { point_one: 345, point_two: 375, point_three: 405 },
+                { point_one: 440, point_two: 455, point_three: 470 },
+                { point_one: 505, point_two: 525, point_three: 540 },
+                { point_one: 572, point_two: 588, point_three: 605 },
+                { point_one: 630, point_two: 646, point_three: 660 },
+                { point_one: 687, point_two: 700, point_three: 716 },
+                { point_one: 744, point_two: 759, point_three: 772 },
+                { point_one: 800, point_two: 815, point_three: 828 },
+                { point_one: 855, point_two: 874, point_three: 890 },
+                { point_one: 920, point_two: 938, point_three: 955 },
+                { point_one: 990, point_two: 1005, point_three: 1023 },
+                { point_one: 1055, point_two: 1088, point_three: 1118 },
+                { point_one: 1140, point_two: 1180, point_three: 1215 },
+                { point_one: 1240, point_two: 1275, point_three: 1310 },
+            ],
+            PS: [
+                { point_one: 150, point_two: 180, point_three: 215 },
+                { point_one: 245, point_two: 285, point_three: 315 },
+                { point_one: 345, point_two: 375, point_three: 405 },
+                { point_one: 440, point_two: 455, point_three: 470 },
+                { point_one: 505, point_two: 525, point_three: 540 },
+                { point_one: 572, point_two: 588, point_three: 605 },
+                { point_one: 630, point_two: 646, point_three: 660 },
+                { point_one: 687, point_two: 700, point_three: 716 },
+                { point_one: 744, point_two: 759, point_three: 772 },
+                { point_one: 800, point_two: 815, point_three: 828 },
+                { point_one: 855, point_two: 874, point_three: 890 },
+                { point_one: 920, point_two: 938, point_three: 955 },
+                { point_one: 990, point_two: 1005, point_three: 1023 },
+                { point_one: 1055, point_two: 1088, point_three: 1118 },
+                { point_one: 1140, point_two: 1180, point_three: 1215 },
+                { point_one: 1240, point_two: 1275, point_three: 1310 },
+            ]
+        },
+        vestibular: {
             MG: [
                 { point_one: 125, point_two: 155, point_three: 185 },
                 { point_one: 200, point_two: 230, point_three: 258 },
@@ -76,24 +153,6 @@ const pontosGrafico = {
                 { point_one: 1184, point_two: 1211, point_three: 1238 },
                 { point_one: 1255, point_two: 1287, point_three: 1315 },
             ]
-        }
-    },
-    inferior: {
-        lingual: {
-            MG: {
-                // Pontos do inferior lingual MG
-            },
-            PS: {
-                // Pontos do inferior lingual PS 
-            }
-        },
-        vestibular: {
-            MG: {
-                // Pontos do inferior vestibular MG
-            },
-            PS: {
-                // Pontos do inferior vestibular PS
-            }
         }
     }
 };

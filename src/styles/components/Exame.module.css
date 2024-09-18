@@ -10,7 +10,7 @@
     gap: 18px;
 }
 
-.exame_content_page_vestibular, .exame_content_page_palatina {
+.exame_content_page_superior_vestibular, .exame_content_page_superior_palatina, .exame_content_page_inferior_lingual, .exame_content_page_inferior_vestibular {
     display: flex;
     flex-direction: column;
     align-items: end;

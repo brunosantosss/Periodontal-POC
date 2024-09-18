@@ -12,7 +12,34 @@ import Footer from "../../Components/common/Footer";
 import ListasGrafico from "./components/ListasGrafico";
 
 const NovoExame = () => {
-    const [ dentesInfo, setDentesInfo ] = useState(
+    const [ superioresDentesInfo, setSuperioresDentesInfo ] = useState(
+        Array.from({ length: 16 }, () => (
+            { 
+                dente_index: -1, 
+                dente_implante: false, 
+                dente_ativado: true, 
+                dente_mobilidade: 0,
+                dente_ss: {
+                    vestibular: [false, false, false],
+                    palatina: [false, false, false], 
+                },
+                dente_placa: {
+                    vestibular: [false, false, false],
+                    palatina: [false, false, false],
+                },
+                dente_nivel_furca: {
+                    vestibular: 0,
+                    palatina: [0, 0]
+                }, 
+                dente_grafico_coordenadas: {
+                    vestibular: [0, 0, 0],
+                    palatina: [0, 0],
+                }
+            }
+        ))
+    )
+
+    const [ inferioresDentesInfo, setInferioresDentesInfo ] = useState(
         Array.from({ length: 16 }, () => (
             { 
                 dente_index: -1, 
@@ -59,7 +86,7 @@ const NovoExame = () => {
                 MG: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 })),
                 PS: Array.from({ length: 16 }, () => ({ point_one: 0, point_two: 0, point_three: 0 }))
             }
-        }
+        },
     });
 
     // Superiores (Vestibulares - MG)  
@@ -123,53 +150,161 @@ const NovoExame = () => {
         }));
     };
 
+    // Inferiores (Linguais - MG)  
+    const handleInferiorLingualMGy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.inferior.lingual.MG.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            inferior: {
+                ...prevObj.inferior,
+                lingual: {
+                    ...prevObj.inferior.lingual, 
+                    MG: updatedDentes
+                }
+            }
+        }));
+    };
+    // Inferiores (Linguais - PS)  
+    const handleInferiorLingualPSy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.inferior.lingual.PS.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            inferior: {
+                ...prevObj.inferior,
+                lingual: {
+                    ...prevObj.inferior.lingual, 
+                    PS: updatedDentes
+                }
+            }
+        }));
+    };
+
+    // Inferiores (Vestibulares - MG)  
+    const handleInferiorVestibularMGy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.inferior.vestibular.MG.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            inferior: {
+                ...prevObj.inferior,
+                vestibular: {
+                    ...prevObj.inferior.vestibular, 
+                    MG: updatedDentes
+                }
+            }
+        }));
+    };
+    // Inferiores (Vestibulares - PS)  
+    const handleInferiorVestibularPSy = (denteIndex, pointName, value) => {
+        const updatedDentes = pontosYGrafico.inferior.vestibular.PS.flat().map((dente, index) => index === denteIndex ? {...dente, [pointName]: Number(value)} : dente);
+
+        setPontosYGrafico((prevObj) => ({
+            ...prevObj,
+            inferior: {
+                ...prevObj.inferior,
+                vestibular: {
+                    ...prevObj.inferior.vestibular, 
+                    PS: updatedDentes
+                }
+            }
+        }));
+    };
+
     return (
         <>
             <Navbar />
             <div className="overflow-x-auto">    
                 <section id="exame-content-page" className={ style.exame_content_page }>
-                    <div className={style.exame_content_page_vestibular}>
+                    <div className={style.exame_content_page_superior_vestibular}>
                         <InputInformations 
-                            dentesInfo={dentesInfo}
-                            setDentesInfo={setDentesInfo}
+                            dentesInfo={superioresDentesInfo}
+                            setDentesInfo={setSuperioresDentesInfo}
                             dentesYCoordsMG={pontosYGrafico.superior.vestibular.MG}
                             dentesYCoordsPS={pontosYGrafico.superior.vestibular.PS}
                             handleYInputChangeMG={handleSuperiorVestibularMGy}
                             handleYInputChangePS={handleSuperiorVestibularPSy}
                             setPontosYGrafico={setPontosYGrafico}
-                            Palatino={false}
+                            Superior={true}
+                            Frente={true}
                         />
                         <div className={ style.exame_content_page_dentes_container }>             
                             {
-                                dentesInfo.map((_, index) => (
-                                    <Dente dentesInfo={dentesInfo} denteIndex={index} Palatino={false}/>
+                                superioresDentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={superioresDentesInfo} denteIndex={index} Superior={true} Frente={true}/>
                                 ))
                             }
-                            <ListasGrafico Palatino={false}/>
-                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.vestibular.MG} dentesYCoordsPS={pontosYGrafico.superior.vestibular.PS} Palatino={false}/>
+                            <ListasGrafico Superior={true} Frente={true}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.vestibular.MG} dentesYCoordsPS={pontosYGrafico.superior.vestibular.PS} Superior={true} Frente={true}/>
                         </div>
                     </div>
-
-                    <div className={ style.exame_content_page_palatina }>
+                    <div className={ style.exame_content_page_superior_palatina }>
                         <div className={ style.exame_content_page_dentes_container }>             
                             {
-                                dentesInfo.map((_, index) => (
-                                    <Dente dentesInfo={dentesInfo} denteIndex={index} Palatino={true}/>
+                                superioresDentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={superioresDentesInfo} denteIndex={index} Superior={true} Frente={false}/>
                                 ))
                             }
-                            <ListasGrafico Palatino={true}/>
-                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.palatina.MG} dentesYCoordsPS={pontosYGrafico.superior.palatina.PS} Palatino={true}/>
+                            <ListasGrafico Superior={true} Frente={false}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.superior.palatina.MG} dentesYCoordsPS={pontosYGrafico.superior.palatina.PS} Superior={true} Frente={false}/>
                         </div>
 
                         <InputInformations 
-                            dentesInfo={dentesInfo}
-                            setDentesInfo={setDentesInfo}
+                            dentesInfo={superioresDentesInfo}
+                            setDentesInfo={setSuperioresDentesInfo}
                             dentesYCoordsMG={pontosYGrafico.superior.palatina.MG}
                             dentesYCoordsPS={pontosYGrafico.superior.palatina.PS}
                             handleYInputChangeMG={handleSuperiorPalatinoMGy}
                             handleYInputChangePS={handleSuperiorPalatinoPSy}
                             setPontosYGrafico={setPontosYGrafico}
-                            Palatino={true}
+                            Superior={true}
+                            Frente={false}
+                        />
+                    </div>
+
+                    <div className={style.exame_content_page_inferior_lingual}>
+                        <InputInformations 
+                            dentesInfo={inferioresDentesInfo}
+                            setDentesInfo={setInferioresDentesInfo}
+                            dentesYCoordsMG={pontosYGrafico.inferior.lingual.MG}
+                            dentesYCoordsPS={pontosYGrafico.inferior.lingual.PS}
+                            handleYInputChangeMG={handleInferiorLingualMGy}
+                            handleYInputChangePS={handleInferiorLingualPSy}
+                            setPontosYGrafico={setPontosYGrafico}
+                            Superior={false}
+                            Frente={true}
+                        />
+                        <div className={ style.exame_content_page_dentes_container }>             
+                            {
+                                inferioresDentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={inferioresDentesInfo} denteIndex={index} Superior={false} Frente={true}/>
+                                )) 
+                            }
+                            <ListasGrafico Superior={false} Frente={true}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.inferior.lingual.MG} dentesYCoordsPS={pontosYGrafico.inferior.lingual.PS} Superior={false} Frente={true}/>
+                        </div>
+                    </div>
+                    <div className={style.exame_content_page_inferior_vestibular}>
+                        <div className={ style.exame_content_page_dentes_container }>             
+                            {
+                                inferioresDentesInfo.map((_, index) => (
+                                    <Dente dentesInfo={inferioresDentesInfo} denteIndex={index} Superior={false} Frente={false}/>
+                                )) 
+                            }
+                            <ListasGrafico Superior={false} Frente={false}/>
+                            <Grafico dentesYCoordsMG={pontosYGrafico.inferior.vestibular.MG} dentesYCoordsPS={pontosYGrafico.inferior.vestibular.PS} Superior={false} Frente={false}/>
+                        </div>
+                        <InputInformations 
+                            dentesInfo={inferioresDentesInfo}
+                            setDentesInfo={setInferioresDentesInfo}
+                            dentesYCoordsMG={pontosYGrafico.inferior.vestibular.MG}
+                            dentesYCoordsPS={pontosYGrafico.inferior.vestibular.PS}
+                            handleYInputChangeMG={handleInferiorVestibularMGy}
+                            handleYInputChangePS={handleInferiorVestibularPSy}
+                            setPontosYGrafico={setPontosYGrafico}
+                            Superior={false}
+                            Frente={false}
                         />
                     </div>
                 </section>

@@ -3,10 +3,8 @@
 }
 
 .dentes_container img {
-    width: 75px !important;
-    max-width: 75px;
-    height: 264px;
-    width: 80px;
+    width: 100%;
+    max-width: 98px;
     height: 257px;
     /* max-width: 80px; */
 }
