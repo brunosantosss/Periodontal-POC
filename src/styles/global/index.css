@@ -84,6 +84,14 @@ input[type="number"]::-webkit-outer-spin-button {
     --bs-gradient: none !important;
 }
 
+.navbar {
+    --bs-navbar-padding-y: 0rem !important;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 0rem !important;
+}
+
 .form-check-input:checked[type=checkbox] {
     --bs-form-check-bg-image: "" !important;
 }

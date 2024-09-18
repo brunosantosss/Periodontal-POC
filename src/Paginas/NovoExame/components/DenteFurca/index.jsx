@@ -9,45 +9,45 @@ const DenteFurca = ( {denteIndex, denteNivelFurca, Superior, Frente} ) => {
         denteIndex === 15 ? 120 : 0; 
 
     let furcaLeft = 
-        denteIndex === 0 ? 27 : 0 || 
-        denteIndex === 1 ? 27 : 0 || 
-        denteIndex === 2 ? 27 : 0 ||
-        denteIndex === 13 ? 28 : 0 ||
-        denteIndex === 14 ? 29 : 0 ||
-        denteIndex === 15 ? 29 : 0;
+        denteIndex === 0 ? 29 : 0 || 
+        denteIndex === 1 ? 30 : 0 || 
+        denteIndex === 2 ? 36 : 0 ||
+        denteIndex === 13 ? 36 : 0 ||
+        denteIndex === 14 ? 33 : 0 ||
+        denteIndex === 15 ? 31 : 0;
     
     // Palatina ( Furca 1 )
     let palfurcaTop1 = 
-        denteIndex === 0 ? 120 : 0 || 
-        denteIndex === 1 ? 127 : 0 || 
+        denteIndex === 0 ? 110 : 0 || 
+        denteIndex === 1 ? 120 : 0 || 
         denteIndex === 2 ? 138 : 0 ||
         denteIndex === 13 ? 117 : 0 || 
         denteIndex === 14 ? 130 : 0 || 
         denteIndex === 15 ? 122 : 0; 
 
     let palfurcaLeft1 = 
-        denteIndex === 0 ? 3 : 0 || 
+        denteIndex === 0 ? 5 : 0 || 
         denteIndex === 1 ? 6 : 0 || 
-        denteIndex === 2 ? 4 : 0 ||
-        denteIndex === 13 ? 12 : 0 ||
-        denteIndex === 14 ? 19 : 0 ||
+        denteIndex === 2 ? 6 : 0 ||
+        denteIndex === 13 ? 16 : 0 ||
+        denteIndex === 14 ? 20 : 0 ||
         denteIndex === 15 ? 13 : 0;
     
     // Palatina ( Furca 2 ) 
     let palfurcaTop2 = 
-        denteIndex === 0 ? 130 : 0 || 
+        denteIndex === 0 ? 120 : 0 || 
         denteIndex === 1 ? 128 : 0 || 
-        denteIndex === 2 ? 118 : 0 ||
+        denteIndex === 2 ? 115 : 0 ||
         denteIndex === 13 ? 138 : 0 || 
         denteIndex === 14 ? 120 : 0 || 
         denteIndex === 15 ? 112 : 0; 
 
     let palfurcaLeft2 = 
-        denteIndex === 0 ? 50 : 0 || 
-        denteIndex === 1 ? 39 : 0 || 
-        denteIndex === 2 ? 45 : 0 ||
-        denteIndex === 13 ? 53 : 0 ||
-        denteIndex === 14 ? 52 : 0 ||
+        denteIndex === 0 ? 45 : 0 || 
+        denteIndex === 1 ? 45 : 0 || 
+        denteIndex === 2 ? 60 : 0 ||
+        denteIndex === 13 ? 69 : 0 ||
+        denteIndex === 14 ? 60 : 0 ||
         denteIndex === 15 ? 55 : 0;
 
     // Lingual

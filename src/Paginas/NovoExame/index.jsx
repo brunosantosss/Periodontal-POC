@@ -262,6 +262,15 @@ const NovoExame = () => {
                             Frente={false}
                         />
                     </div>
+                    
+                    <div className={ style.exame_content_page_separador }>
+                        <div>
+                            <p>Média da profund. de sondagem = <span>3.1 </span>mm</p>
+                            <p>Média do nível de inserção = <span>3.3 </span>mm</p>
+                            <p><span>72%</span> Placa</p>
+                            <p><span>45%</span> Sangramento à sondagem</p>
+                        </div>
+                    </div>
 
                     <div className={style.exame_content_page_inferior_lingual}>
                         <InputInformations 
