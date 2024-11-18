@@ -1,0 +1,128 @@
+.icons_control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px; 
+    opacity: 0.6;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;  
+}
+
+.icons_control:hover{
+    opacity: 1;
+}
+
+.arrow_up_button,
+.arrow_down_button {
+    position: relative;    
+    background-color: #5C6BC0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, .15);
+}
+
+.save_button {
+    position: relative;    
+    background-color: #4CAF50;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, .15);
+}
+
+.arrow_up_button:hover,
+.arrow_down_button:hover,
+.save_button:hover {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.alerts_api {
+    display: none;   
+}
+
+.alerts_api_show {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, .15);
+    z-index: 3;
+}
+
+.alerts_api_msg {
+    margin: 0;
+    padding: 0;
+}
+
+.close_alert {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.alerts_api {
+    .alert {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin: 0;
+        padding: 12px 20px;
+    }
+}
+
+/* Mobile device */
+@media (max-width: 763px) {
+    .icons_control {
+        right: 10px;
+        width: 50px;
+    }
+    .arrow_up_button,
+    .arrow_down_button {
+        width: 50px;
+        height: 50px;
+    }
+    .save_button {
+        width: 50px;
+        height: 50px;
+    }
+}

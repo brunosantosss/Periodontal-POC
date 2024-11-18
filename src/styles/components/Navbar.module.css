@@ -1,5 +1,6 @@
 .navbar_content {
     width: 100%;
+    
     background-color: var(--grey) !important;
 }
 
@@ -15,6 +16,11 @@
     padding-top: 12px;
     font-size: 21px;
     font-weight: 600;
+}
+
+.navbar_content_brand_img {
+    width: 35px;
+    max-height: 45px;
 }
 
 .navbar_content_paciente_btn h3 {
@@ -39,36 +45,59 @@
     font-size: 22px;
 }
 
-.navbar_content_img {
-    width: 35px;
-    max-height: 45px;
-}
-
-.navbar_content_menu_paciente_identificacao, .navbar_content_menu_paciente_amnese {
-    width: 500px;
-    padding: 1em;
+/* Paciente_Identificacao */
+.navbar_content_menu_paciente_identificacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
     border-radius: 12px;
+    padding: 1em;
     background-color: #46468b;
+    /* border-right: 21px dashed #fff; */
 }
-.navbar_content_menu_paciente_identificacao p, .navbar_content_menu_paciente_amnese p {
+.navbar_content_menu_paciente_identificacao p {
     font-size: 18px;
     font-weight: 400;
     color: var(--white);
 }
-.navbar_content_menu_paciente_identificacao p span, .navbar_content_menu_paciente_amnese p span {
+.navbar_content_menu_paciente_identificacao p span {
     margin-right: 5px;
-    font-weight: 600;
+    font-weight: 700;
 }
+/* Paciente_Identificacao */
 
-.navbar_content_menu_paciente_amnese {
-    width: 1500px;
+/* Paciente_Anamnese */
+.navbar_content_menu_paciente_Anamnese {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #46468b;
+    padding: 1em;
+    border-radius: 12px;
+}
+.navbar_content_menu_paciente_Anamnese_left, .navbar_content_menu_paciente_Anamnese_right {
+    width: 50%;
+    height: 100%;
+    padding: 1em 3em 1em 3em;
+}
+.navbar_content_menu_paciente_Anamnese_left {
+    border-right: 1px solid white;
+}
+.navbar_content_menu_paciente_Anamnese p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+}
+.navbar_content_menu_paciente_Anamnese p span {
+    margin-right: 5px;
+    font-weight: 700;
 }
 
-.navbar_content_menu_paciente_amnese textarea {
-    width: 600px;
+.navbar_content_menu_paciente_Anamnese textarea {
+    width: 100%;
+    max-width: 810px;
     height: 100px;
     color: var(--white);
     background-color: transparent;
@@ -77,26 +106,52 @@
     margin-bottom: 18px;
 }
 
-.navbar_content_menu_paciente_amnese_divisor {
-    width: 1px;
-    height: 360px;
-    background-color: white;
-}
+/* Paciente_Anamnese */
 
 .selected {
     font-weight: 700;
     border-bottom: 1px solid white;
 }
 
-@media (max-width: 763px) {
-    .navbar_content_brand {
-        padding-left: .6em;
+/* Mobile device */
+@media (max-width: 1460px) {
+    .navbar_content_menu_paciente_Anamnese_left p {
+        font-size: 16px;
     }
-    .navbar_content_brand h3 {
-        font-size: 20px;
+}
+
+@media (max-width: 950px) {
+    .navbar_content_menu_paciente_Anamnese {
+        flex-direction: column;
     }
-    
-    .navbar_content_paciente_btn h3 {
-        padding-right: .6em;
+    .navbar_content_menu_paciente_Anamnese_left, .navbar_content_menu_paciente_Anamnese_right { 
+        width: 100%; 
+        border: none;
+        padding: .7em 1.5em .7em 1.5em; 
     }
+}
+
+@media (max-width: 563px) {
+    .navbar_content_brand { padding-left: .6em; }
+    .navbar_content_paciente_btn { padding-right: .6em; }
+    .navbar_content_brand h3 { font-size: 20px; }
+    .navbar_content_brand_img { width: 18px; }
+    .navbar_content_paciente_btn h3 { display: none; }
+
+    .navbar_content_menu {
+        padding: 1.5em 1.5em 1.5em 1.5em;
+    }
+
+    /* Paciente_Anamnese */
+    .navbar_content_menu_paciente_Anamnese_left p span { font-size: 18px; }
+    .navbar_content_menu_paciente_Anamnese_left p { font-size: 17px; }
+    .navbar_content_menu_paciente_Anamnese_left textarea { font-size: 16px; }
+
+
+    .navbar_content_menu_paciente_Anamnese_left, .navbar_content_menu_paciente_Anamnese_right { 
+        width: 100%; 
+        border: none;
+        padding: .7em .5em .7em .5em; 
+    }
+    /* Paciente_Anamnese */
 }

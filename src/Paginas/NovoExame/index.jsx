@@ -10,6 +10,7 @@ import Grafico from "./components/Grafico";
 import Navbar from "../../Components/common/Navbar";
 import Footer from "../../Components/common/Footer";
 import ListasGrafico from "./components/ListasGrafico";
+import NavSections from "../../Components/exame/NavSections";
 
 const NovoExame = () => {
     const [ superioresDentesInfo, setSuperioresDentesInfo ] = useState(
@@ -215,9 +216,10 @@ const NovoExame = () => {
     return (
         <>
             <Navbar />
+            <NavSections />
             <div className="overflow-x-auto">    
                 <section id="exame-content-page" className={ style.exame_content_page }>
-                    <div className={style.exame_content_page_superior_vestibular}>
+                    <div id="superior" className={style.exame_content_page_superior_vestibular}>
                         <InputInformations 
                             dentesInfo={superioresDentesInfo}
                             setDentesInfo={setSuperioresDentesInfo}
@@ -272,7 +274,7 @@ const NovoExame = () => {
                         </div>
                     </div>
 
-                    <div className={style.exame_content_page_inferior_lingual}>
+                    <div id="inferior" className={style.exame_content_page_inferior_lingual}>
                         <InputInformations 
                             dentesInfo={inferioresDentesInfo}
                             setDentesInfo={setInferioresDentesInfo}

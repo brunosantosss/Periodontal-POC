@@ -7,33 +7,33 @@ import { useState } from "react";
 const Navbar = ({ RotaInicio }) => {
     const [ menuOptionIdentificacao, setMenuOptionIdentificacao ] = useState(true);
     const handleOptionIdentificacao = () => {
-        if (menuOptionAmnese)
-            setMenuOptionAmnese(false);
+        if (menuOptionAnamnese)
+            setMenuOptionAnamnese(false);
         setMenuOptionIdentificacao(true);
     }
-    const [ menuOptionAmnese, setMenuOptionAmnese ] = useState(false);
-    const handleOptionAmnese = () => {
+    const [ menuOptionAnamnese, setMenuOptionAnamnese ] = useState(false);
+    const handleOptionAnamnese = () => {
         if (menuOptionIdentificacao)
             setMenuOptionIdentificacao(false);
 
-        setMenuOptionAmnese(true);
+        setMenuOptionAnamnese(true);
     }
 
     return (
         <>
         {
             RotaInicio ? (
-                <nav id="top-bar" className= { style.navbar_content + " d-flex justify-content-center py-1"}>
-                    <div className="d-flex align-items-center gap-3">
-                        <img src={fp_logo} className={ style.navbar_content_img } />
-                        <h3 className="text-white mt-2">Exame periodontal</h3>
+                <nav id="top-bar" className= { style.navbar_content + " d-flex justify-content-center"}>
+                    <div className={ style.navbar_content_brand }>
+                        <img src={fp_logo} className={ style.navbar_content_brand_img } />
+                        <h3>Exame periodontal</h3>
                     </div>
                 </nav>
             ) : (
                 <nav className={ style.navbar_content + " navbar bg-body-tertiary"}>
                     <div className="container-fluid">
                         <div className={ style.navbar_content_brand }>
-                            <img src={fp_logo} className={ style.navbar_content_img } />
+                            <img src={fp_logo} className={ style.navbar_content_brand_img } />
                             <h3>Exame periodontal</h3>
                         </div>
 
@@ -48,10 +48,10 @@ const Navbar = ({ RotaInicio }) => {
                                     <p className={ "pointer " + `${menuOptionIdentificacao ? style.selected : ""}` } 
                                     onClick={() => handleOptionIdentificacao()}>Identificação</p>
 
-                                    <p className={ "pointer " + `${menuOptionAmnese ? style.selected : ""}` } 
-                                    onClick={() => handleOptionAmnese()}>Amnese</p>
+                                    <p className={ "pointer " + `${menuOptionAnamnese ? style.selected : ""}` } 
+                                    onClick={() => handleOptionAnamnese()}>Anamnese</p>
                                 </div>
-
+                                
                                 {
                                     menuOptionIdentificacao ? (
                                         <div className={ style.navbar_content_menu_paciente_identificacao }>
@@ -64,8 +64,8 @@ const Navbar = ({ RotaInicio }) => {
                                             <p><span>Nº Para emergência:</span> 99 99999-9999</p>
                                         </div>
                                     ) : (
-                                        <div className={ style.navbar_content_menu_paciente_amnese }>
-                                            <div>
+                                        <div className={ style.navbar_content_menu_paciente_Anamnese }>
+                                            <div className={ style.navbar_content_menu_paciente_Anamnese_left }>
                                                 <p><span>Queixa principal e evolução da doença atual:</span></p>
                                                 <textarea value="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, eum. Dolores laboriosam est quos iure expedita harum deleniti tempore quo aut, quas iusto culpa corrupti ullam autem consequatur alias consectetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, eum. Dolores laboriosam est quos iure expedita harum deleniti tempore quo aut, quas iusto culpa corrupti ullam autem consequatur alias consectetur!" disabled></textarea>
                                                 <p><span>Sofre de alguma doença?:</span> Sim</p>
@@ -75,10 +75,7 @@ const Navbar = ({ RotaInicio }) => {
                                                 <p><span>Tem alergia?:</span> Sim</p>
                                             </div>
 
-                                            <div className={ style.navbar_content_menu_paciente_amnese_divisor }>
-                                            </div>
-
-                                            <div>
+                                            <div className={ style.navbar_content_menu_paciente_Anamnese_right }>
                                                 <p><span>Já foi operado?:</span> Sim</p>
                                                 <p><span>Teve problemas com cicatrização?:</span> Sim</p>
                                                 <p><span>Teve problemas com anestesia?:</span> Sim</p>
