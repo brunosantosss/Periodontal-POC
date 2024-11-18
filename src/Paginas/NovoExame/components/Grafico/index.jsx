@@ -64,7 +64,7 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS, Superior, Frente} ) => {
             Superior ? (
                 <>
                     {Frente ? (
-                        <svg className='position-absolute inverted-y' style={{width: "1320px", marginBottom: "93px"}} >
+                        <svg className='position-absolute' style={{width: "1320px", height: "250px", marginBottom: "-30px"}} viewBox="0 -100 1320 200" >
                             <polyline 
                                 fill="#5252A2" 
                                 stroke="#5252A2" 
@@ -82,7 +82,8 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS, Superior, Frente} ) => {
                         </svg>
                     ) : (
                         <>
-                        <svg className='position-absolute' style={{width: "1320px", marginBottom: "15px"}} >
+                        <svg className='position-absolute inverted-y' style={{width: "1320px", height: "250px", marginBottom: "39px"}}
+                        viewBox="0 -100 1320 200" >
                             <polyline 
                                 fill="#5252A2" 
                                 stroke="#5252A2" 
@@ -104,7 +105,7 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS, Superior, Frente} ) => {
             ) : (
                 <>
                     {Frente ? (
-                        <svg className='position-absolute inverted-y' style={{width: "1320px", marginBottom: "96px"}} >
+                        <svg className='position-absolute' style={{width: "1320px", height: "250px", marginBottom: "-28px"}} viewBox="0 -100 1320 200"  >
                             <polyline 
                                 fill="#5252A2" 
                                 stroke="#5252A2" 
@@ -122,7 +123,7 @@ const Grafico = ( {dentesYCoordsMG, dentesYCoordsPS, Superior, Frente} ) => {
                         </svg>
                     ) : (
                         <>
-                        <svg className='position-absolute' style={{width: "1320px", marginBottom: "10px"}} >
+                        <svg className='position-absolute inverted-y' style={{width: "1320px", height: "250px", marginBottom: "35px"}} viewBox="0 -100 1320 200"  >
                             <polyline 
                                 fill="#5252A2" 
                                 stroke="#5252A2" 

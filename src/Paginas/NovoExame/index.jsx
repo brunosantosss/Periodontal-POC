@@ -219,7 +219,9 @@ const NovoExame = () => {
             <NavSections />
             <div className="overflow-x-auto">    
                 <section id="exame-content-page" className={ style.exame_content_page }>
+                    {/* Dentes superiores */}
                     <div id="superior" className={style.exame_content_page_superior_vestibular}>
+                        {/* Vestibular */}
                         <InputInformations 
                             dentesInfo={superioresDentesInfo}
                             setDentesInfo={setSuperioresDentesInfo}
@@ -242,6 +244,7 @@ const NovoExame = () => {
                         </div>
                     </div>
                     <div className={ style.exame_content_page_superior_palatina }>
+                        {/* Palatina */}
                         <div className={ style.exame_content_page_dentes_container }>             
                             {
                                 superioresDentesInfo.map((_, index) => (
@@ -274,7 +277,9 @@ const NovoExame = () => {
                         </div>
                     </div>
 
+                    {/* Dentes inferiores */}
                     <div id="inferior" className={style.exame_content_page_inferior_lingual}>
+                        {/* Lingual */}
                         <InputInformations 
                             dentesInfo={inferioresDentesInfo}
                             setDentesInfo={setInferioresDentesInfo}
@@ -297,6 +302,7 @@ const NovoExame = () => {
                         </div>
                     </div>
                     <div className={style.exame_content_page_inferior_vestibular}>
+                        {/* Vestibular */}
                         <div className={ style.exame_content_page_dentes_container }>             
                             {
                                 inferioresDentesInfo.map((_, index) => (

@@ -13,10 +13,17 @@ const ProfundidadeSondagem = ({ dente, dentesInfo, denteIndex, handleYInputChang
                                         placeholder={`0`}
                                         aria-label={`Y ${pointName}`}
                                         aria-describedby="basic-addon1"
-                                        onChange={(e) => {
-                                            handleYInputChangePS(denteIndex, pointName, 
-                                                ( ( dentesYCoordsMG[denteIndex][pointName] - ( e.target.value * 10 ) ) ) 
-                                            || 0)}
+                                        onChange={
+                                            (e) => {
+                                                const newValueY = e.target.value * 10;
+                                                if(newValueY > 0 && !isNaN(Number(newValueY))) {
+                                                    handleYInputChangePS(denteIndex, pointName, 
+                                                        (dentesYCoordsMG[denteIndex][pointName] - newValueY) || 0)
+                                                }
+                                                else {
+                                                    handleYInputChangePS(denteIndex, pointName, 0);
+                                                }
+                                            }
                                         }
                                     />
                                 </>

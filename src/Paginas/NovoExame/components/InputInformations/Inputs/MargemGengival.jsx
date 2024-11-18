@@ -1,4 +1,4 @@
-const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG }) => {
+const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG, handleYInputChangePS, dentesYCoordsPS }) => {
     return (
         <div key={denteIndex} className="w-100 d-flex py-1 border">
             {Object.keys(dente).map((pointName) => (
@@ -13,8 +13,12 @@ const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG })
                                 aria-describedby="basic-addon1"
                                 onChange={
                                     (e) => {
-                                        handleYInputChangeMG(denteIndex, pointName, (e.target.value * 10) || 0)
-                                        
+                                        const newValueY = e.target.value * 10;
+                                        handleYInputChangeMG(denteIndex, pointName, newValueY || 0)
+
+                                        if(dentesYCoordsPS[denteIndex][pointName] !== 0) {
+                                            handleYInputChangePS(denteIndex, pointName, (newValueY / 2) || 0)
+                                        }
                                     }
                                 }
                             />

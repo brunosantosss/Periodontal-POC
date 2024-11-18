@@ -8,19 +8,18 @@ import { IoArrowDownOutline } from "react-icons/io5";
 import { IoCloseOutline } from "react-icons/io5";
 
 const NavSections = () => {
-    const [showAlert, setShowAlert] = useState(false); // Estado para controlar visibilidade dos alertas
-    const [alertType, setAlertType] = useState('danger'); // Tipo de alerta (success, warning, danger)
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertType, setAlertType] = useState('danger');
 
     // Função para mostrar alerta
     const handleShowAlert = (type) => {
         setAlertType(type);
         setShowAlert(true);
         setTimeout(() => {
-            setShowAlert(false); // Ocultar o alerta após 6 segundos
+            setShowAlert(false);
         }, 6000);
     };
 
-    // useEffect com array vazio para rodar somente 1 vez por renderização.
     useEffect(() => {
         handleShowAlert(alertType);
     }, []);
