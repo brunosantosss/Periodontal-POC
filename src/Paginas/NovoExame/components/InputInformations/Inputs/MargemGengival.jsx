@@ -1,4 +1,4 @@
-const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG, handleYInputChangePS, dentesYCoordsPS }) => {
+const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG, handleYInputChangePS, dentesYCoordsMG, dentesYCoordsPS }) => {
     return (
         <div key={denteIndex} className="w-100 d-flex py-1 border">
             {Object.keys(dente).map((pointName) => (
@@ -14,11 +14,18 @@ const MargemGengival = ({ dente, dentesInfo, denteIndex, handleYInputChangeMG, h
                                 onChange={
                                     (e) => {
                                         const newValueY = e.target.value * 10;
-                                        handleYInputChangeMG(denteIndex, pointName, newValueY || 0)
+                                        let adjustY;
 
-                                        if(dentesYCoordsPS[denteIndex][pointName] !== 0) {
-                                            handleYInputChangePS(denteIndex, pointName, (newValueY / 2) || 0)
+                                        handleYInputChangeMG(denteIndex, pointName, newValueY || 0);
+                                        
+                                        if(newValueY === 0 ) {
+                                            adjustY = dentesYCoordsPS[denteIndex][pointName] - dentesYCoordsMG[denteIndex][pointName];
                                         }
+                                        else {
+                                            adjustY = dentesYCoordsPS[denteIndex][pointName] + newValueY;
+                                        }
+
+                                        handleYInputChangePS(denteIndex, pointName, adjustY);
                                     }
                                 }
                             />

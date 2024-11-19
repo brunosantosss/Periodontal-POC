@@ -18,7 +18,7 @@ const ProfundidadeSondagem = ({ dente, dentesInfo, denteIndex, handleYInputChang
                                                 const newValueY = e.target.value * 10;
                                                 if(newValueY > 0 && !isNaN(Number(newValueY))) {
                                                     handleYInputChangePS(denteIndex, pointName, 
-                                                        (dentesYCoordsMG[denteIndex][pointName] - newValueY) || 0)
+                                                        dentesYCoordsMG[denteIndex][pointName] - newValueY);
                                                 }
                                                 else {
                                                     handleYInputChangePS(denteIndex, pointName, 0);

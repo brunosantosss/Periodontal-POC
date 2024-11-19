@@ -138,12 +138,12 @@ const InputInformations = ( {dentesInfo, setDentesInfo, dentesYCoordsMG, dentesY
                                                 <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={true}/>
     
                                                 <ProfundidadeSondagem dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} />                         
-                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsPS={dentesYCoordsPS} />
+                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} />
                                                 </>
                                             ) : (
                                                 <>     
                                                 <ProfundidadeSondagem dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} />                         
-                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsPS={dentesYCoordsPS} />
+                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} />
                                                 <SangramentoSondagem dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={false}/>
                                                 <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={false}/>
                                                 <Furca dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Superior={Superior} Frente={false}/>
@@ -156,12 +156,12 @@ const InputInformations = ( {dentesInfo, setDentesInfo, dentesYCoordsMG, dentesY
                                                 <SangramentoSondagem dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={false}/>
                                                 <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={false}/>
                                                 <ProfundidadeSondagem dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} />                         
-                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsPS={dentesYCoordsPS} />
+                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} />
                                                 </> 
                                             ) : (
                                                 <>
                                                 <ProfundidadeSondagem dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} />
-                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsPS={dentesYCoordsPS} />
+                                                <MargemGengival dente={dente} dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} handleYInputChangeMG={handleYInputChangeMG} handleYInputChangePS={handleYInputChangePS} dentesYCoordsMG={dentesYCoordsMG} dentesYCoordsPS={dentesYCoordsPS} />
                                                 <Placa dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={true}/> 
                                                 <SangramentoSondagem dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Frente={true}/>
                                                 <Furca dentesInfo={dentesInfo} setDentesInfo={setDentesInfo} denteIndex={index} Superior={Superior} Frente={true}/>
