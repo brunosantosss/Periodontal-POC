@@ -1,0 +1,213 @@
+{
+    "exams": {
+        "exam1": {
+            "exam_id": 123,
+            "exam_upper_teeth_info": [
+                { 
+                    "teeth_index": -1,
+                    "teeth_activate": true,
+                    "teeth_furca_coords": {
+                        "palatina": [0, 0],
+                        "vestibular": [0, 0]
+                    },
+                    "teeth_implant": false,
+                    "teeth_mobility": 0,
+                    "teeth_furca_level": {
+                        "palatina": [0, 0],
+                        "vestibular": 0
+                    },
+                    "teeth_plate": {
+                        "palatina": [false, false, false],
+                        "vestibular": [false, false, false]
+                    },
+                    "teeth_ss": {
+                        "palatina": [false, false, false],
+                        "vestibular": [false, false, false]
+                    }
+                }
+            ],
+            "exam_lower_teeth_info": [
+                { 
+                    "teeth_index": -1,
+                    "teeth_ativado": true,
+                    "teeth_furca_coords": {
+                        "palatina": [0, 0],
+                        "vestibular": [0, 0, 0]
+                    },
+                    "teeth_implant": false,
+                    "teeth_mobility": 0,
+                    "teeth_furca_level": {
+                        "palatina": [0, 0],
+                        "vestibular": 0
+                    },
+                    "teeth_plate": {
+                        "palatina": [false, false, false],
+                        "vestibular": [false, false, false]
+                    },
+                    "teeth_ss": {
+                        "palatina": [false, false, false],
+                        "vestibular": [false, false, false]
+                    }
+                }
+            ],
+            "exam_graphic_points": {
+                "upper": {
+                    "vestibular": {
+                        "MG": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ],
+                        "PS": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ]
+                    },
+                    "palatina": {
+                        "MG": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ],
+                        "PS": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ]
+                    }
+                },
+                "lower": {
+                    "lingual": {
+                        "MG": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ],
+                        "PS": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ]
+                    },
+                    "vestibular": {
+                        "MG": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ],
+                        "PS": [
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 },
+                            { "point_one": 0, "point_two": 0, "point_three": 0 }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
